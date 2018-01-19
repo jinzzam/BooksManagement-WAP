@@ -35,7 +35,7 @@
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
         <div class="jumbotron" style="padding-top: 20px;">
-            <form method="post" action="LoginMain.jsp">
+            <form method="post" action="RequestCertifyEmail.jsp">
                 <h3 style="text-align: center;">PLEASE JOIN US</h3>
 
                 <div class="input-group">

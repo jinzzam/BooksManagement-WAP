@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.DriverManager" %>
+<%@ page import="java.sql.PreparedStatement" %><%--
   Created by IntelliJ IDEA.
   User: jin
   Date: 2018-01-19
@@ -40,42 +42,47 @@
 
                 <div class="input-group">
                     <span class="input-group-addon"> <span class="glyphicon glyphicon-user"> </span> </span>
-                    <input type="text" class="form-control" placeholder="이 름">
+                    <input type="text" class="form-control" placeholder="이 름" name="name">
                 </div>
                 <br>
                 <div class="input-group">
                     <span class="input-group-addon">  <span class="glyphicon glyphicon-heart"></span> </span>
-                    <input type="date" class="form-control" placeholder="생년월일">
+                    <input type="date" class="form-control" placeholder="생년월일" name="birthday">
                 </div>
                 <br>
-                <div class="input-group">
-                    <span class="input-group-addon">  <input type="radio"> </span>
-                    <input type="text" class="form-control" placeholder="남자">
-                </div>
-                <br>
-                <div class="input-group">
-                    <span class="input-group-addon">  <input type="radio"> </span>
-                    <input type="text" class="form-control" placeholder="여자">
+                <div class="radio">
+                    <label class="pull-left">
+                        <div class="pull-left">
+                            <input type="radio" name="gender">
+                            여자
+                        </div>
+                    </label>
+                    <label class="pull-right">
+                        <div class="pull-right">
+                            <input type="radio" name="gender">
+                            남자
+                        </div>
+                    </label>
                 </div>
                 <br>
                 <div class="input-group">
                     <span class="input-group-addon"> <span class="glyphicon glyphicon-user"> </span> </span>
-                    <input type="text" class="form-control" placeholder="아이디">
+                    <input type="text" class="form-control" placeholder="아이디" name="id">
                 </div>
                 <br>
                 <div class="input-group">
                     <span class="input-group-addon">  <span class="glyphicon glyphicon-lock"></span> </span>
-                    <input type="password" class="form-control" placeholder="암 호">
+                    <input type="password" class="form-control" placeholder="암 호" name="password">
                 </div>
                 <br>
                 <div class="input-group">
                     <span class="input-group-addon"> <span class="glyphicon glyphicon-envelope"> </span> </span>
-                    <input type="email" class="form-control" placeholder="이메일">
+                    <input type="email" class="form-control" placeholder="이메일" name="email">
                 </div>
                 <br>
                 <div class="input-group">
                     <span class="input-group-addon"> <span class="glyphicon glyphicon-phone"> </span> </span>
-                    <input type="number" class="form-control" placeholder="핸드폰 번호">
+                    <input type="number" class="form-control" placeholder="핸드폰 번호" name="phone">
                 </div>
                 <br>
                 <input type="submit" class="btn btn-primary form-control" value="JOIN !">
@@ -84,6 +91,44 @@
     </div>
 </div>
 
+<%
+    Connection conn = null;
+
+    try{
+        String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:xe";
+        String dbId = "system";
+        String dbPass = "pass";
+
+        Class.forName("oracle.jdbc.driver.OracleDriver");
+        conn = DriverManager.getConnection(jdbcUrl, dbId, dbPass);
+        out.println("제대로 연결되었습니다.<br>");
+        String name = request.getParameter("name");
+        String birthday = request.getParameter("birthday");
+        String gender = request.getParameter("gender");
+        String id = request.getParameter("id");
+        String password = request.getParameter("password");
+        String email = request.getParameter("email");
+        String phone = request.getParameter("phone");
+
+        String sql = "insert into member (name, birthday, gender, id, password, email, phone)" +
+                "values (?, ?, ?, ?, ?, ?, ?)";
+
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, name);
+        pstmt.setString(2, birthday);
+        pstmt.setString(3, gender);
+        pstmt.setString(4, id);
+        pstmt.setString(5, password);
+        pstmt.setString(6, email);
+        pstmt.setString(7, phone);
+
+        pstmt.executeUpdate();
+        pstmt.close();
+    } catch (Exception e){
+        e.printStackTrace();
+    }
+
+%>
 
 <script src="js/bootstrap.min.js"></script>
 </body>

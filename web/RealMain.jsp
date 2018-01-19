@@ -9,8 +9,8 @@
     <title>WAP 도서관</title>
 
     <!-- Bootstrap -->
-    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../Bootstrap/css/kfonts2.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/kfonts2.css" rel="stylesheet">
     <style>
         body { padding-top: 20px; }
     </style>
@@ -64,13 +64,13 @@
         </div><!-- /.navbar-collapse -->
     </nav>
     <article>
-        <%=id%>
-        <%=password%>
+        <%=id%>님 반갑습니다!<br>
+        비밀번호 (디버그용) : <%=password%>
     </article>
 </div> <!-- container 끝 -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../Bootstrap/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

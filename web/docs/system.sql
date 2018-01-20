@@ -9,6 +9,7 @@ phone varchar2(11));
 
 select * from member;
 drop table member;
+commit;
 
 create table book(
 bigfield varchar2(40) not null,
@@ -23,3 +24,5 @@ checkedout varchar2(20));
 
 select * from book;
 drop table book;
+
+select name from book;

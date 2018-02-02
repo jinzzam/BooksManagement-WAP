@@ -9,6 +9,7 @@ phone varchar2(11));
 
 select * from member;
 drop table member;
+commit;
 
 create table book(
 bigfield varchar2(40) not null,
@@ -23,3 +24,13 @@ checkedout varchar2(20));
 
 select * from book;
 drop table book;
+
+select name from book;
+
+
+create or replace type project_type as object(
+name varchar2(50),
+role varchar2(20)
+);
+
+create type project_table as table of project_type;

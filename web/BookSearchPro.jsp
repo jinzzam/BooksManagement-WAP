@@ -36,7 +36,7 @@
         e.printStackTrace();
     }
 
-
+    response.sendRedirect("BookSearch.jsp");
 %>
 </body>
 </html>

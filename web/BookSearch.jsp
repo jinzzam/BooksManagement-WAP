@@ -25,11 +25,13 @@
         Class.forName("oracle.jdbc.driver.OracleDriver");
         conn = DriverManager.getConnection(jdbcUrl,dbId,dbPass);
 
-        String sql = "select name from book where name = ?";
+        String sql = "select * from book where name = ?";
         PreparedStatement pstmt = conn.prepareStatement(sql);
 
         ResultSet rs = pstmt.executeQuery();
         while(rs.next()){
+            out.println(rs.getString("bigfield")+" ");
+            out.println(rs.getString("no")+" ");
             out.println(rs.getString("name")+" ");
         }
     }catch(Exception e){

@@ -52,6 +52,22 @@
     </div>
 </nav>
 <h2>WAP 도서관 검색</h2>
+<<<<<<< HEAD
+<br/>
+<form method="get" action="/save.php">
+    <div class="container ">
+        <div class="row">
+                <div class="jumbotron center-block" style="height: 200px; width: 1000px; padding: 70px 200px;">
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="form-control input-lg" placeholder="자료를 입력하세요" />
+                        <span class="input-group-btn">
+                        <button type="submit" class="btn btn-info btn-lg" type="button">검색</button>
+                    </span>
+                    </div>
+                </div>
+                </div>
+=======
 <form method="get" action="/save.php">
     <div class="container">
         <div class="row">
@@ -81,6 +97,7 @@
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
             </div>
+>>>>>>> 25d81d620cabc031ca4242a2116330c01181c053
         </div>
     </div>
 </form>

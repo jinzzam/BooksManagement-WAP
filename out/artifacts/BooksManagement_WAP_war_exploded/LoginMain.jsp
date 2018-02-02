@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta name="viewport" content="width = device-width" initial-scale = "1">
-    <link rel = "stylesheet" href="css/bootstrap.min.css">
+    <link rel = "stylesheet" href="./css/bootstrap.min.css">
     <title>WAP LIBRARY</title>
 </head>
 <body>
@@ -69,6 +69,6 @@
     </div>
 </div>
 <script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src = "js/bootstrap.min.js"></script>
+<script src = "./js/bootstrap.min.js"></script>
 </body>
 </html>

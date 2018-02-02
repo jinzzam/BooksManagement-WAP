@@ -11,3 +11,17 @@ select * from member;
 
 insert into member values('박유진', '19971119', 'f', 'youjin', '1234', 'firstmind_@naver.com', '01057192212');
 insert into member values('이정민', '19941207', 'm', 'jeongmin', '9984', 'min@naver.com', '01012345678');
+
+create table book(
+bigfield varchar2(20) not null,
+no varchar2(10) primary key,
+smfield varchar2(10),
+name varchar2(100) not null,
+author varchar2(30) not null,
+translator varchar2(20),
+publisher varchar2(20) not null,
+checkoutdate varchar2(10),
+checkedout varchar2(1));
+
+select * from book;
+drop table book;

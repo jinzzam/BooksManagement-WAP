@@ -8,10 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca61ccdc-2d50-4e44-9a17-7de7d0648693" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/LoginMain.jsp" afterPath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/LoginMain.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/RealMain.jsp" afterPath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/RealMain.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/docs/system.sql" afterPath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/docs/system.sql" />
-      <change beforePath="$PROJECT_DIR$/web/BookSearch.jsp" afterPath="$PROJECT_DIR$/web/BookSearch.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,9 +91,11 @@
       <file leaf-file-name="BookSearch.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/BookSearch.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="58" column="100" lean-forward="false" selection-start-line="58" selection-start-column="100" selection-end-line="58" selection-end-column="100" />
-              <folding />
+            <state relative-caret-position="282">
+              <caret line="44" column="70" lean-forward="false" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -629,12 +627,12 @@
       <workItem from="1516459967307" duration="11067000" />
       <workItem from="1516475477880" duration="278000" />
       <workItem from="1516810609732" duration="1184000" />
-      <workItem from="1517574370014" duration="7065000" />
+      <workItem from="1517574370014" duration="7424000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35049000" />
+    <option name="totallyTimeSpent" value="35408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -755,7 +753,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -823,7 +823,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -915,7 +917,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1101,9 +1105,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/BookSearch.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="58" column="100" lean-forward="false" selection-start-line="58" selection-start-column="100" selection-end-line="58" selection-end-column="100" />
-          <folding />
+        <state relative-caret-position="282">
+          <caret line="44" column="70" lean-forward="false" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -7,13 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca61ccdc-2d50-4e44-9a17-7de7d0648693" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/annotations_api1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/annotations_api.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/BooksManagement-WAP.iml" afterPath="$PROJECT_DIR$/BooksManagement-WAP.iml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/LoginMain.jsp" afterPath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/LoginMain.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/RealMain.jsp" afterPath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/RealMain.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/docs/system.sql" afterPath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/docs/system.sql" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/BorrowingExtensionReservation.jsp" />
+      <change beforePath="$PROJECT_DIR$/web/BookSearch.jsp" afterPath="$PROJECT_DIR$/web/BookSearch.jsp" />
       <change beforePath="$PROJECT_DIR$/web/LoginMain.jsp" afterPath="$PROJECT_DIR$/web/LoginMain.jsp" />
       <change beforePath="$PROJECT_DIR$/web/RealMain.jsp" afterPath="$PROJECT_DIR$/web/RealMain.jsp" />
     </list>
@@ -39,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JoinIn.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JoinIn.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/JoinIn.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="113" column="47" lean-forward="false" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
+            <state relative-caret-position="510">
+              <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding>
                 <marker date="1516459953939" expanded="true" signature="4686:4806" ph="insert into member... " />
               </folding>
@@ -61,11 +56,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="BorrowingExtensionReservation.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/BorrowingExtensionReservation.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="RealMain.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/RealMain.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="50" column="42" lean-forward="false" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
+            <state relative-caret-position="510">
+              <caret line="74" column="7" lean-forward="false" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -74,9 +79,11 @@
       <file leaf-file-name="LoginMain.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/LoginMain.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" column="53" lean-forward="false" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
-              <folding />
+            <state relative-caret-position="510">
+              <caret line="40" column="7" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,8 +91,8 @@
       <file leaf-file-name="BookSearch.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/BookSearch.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="510">
+              <caret line="89" column="7" lean-forward="false" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -144,12 +151,13 @@
       <list>
         <option value="$PROJECT_DIR$/web/RequestCertifyEmail.jsp" />
         <option value="$PROJECT_DIR$/web/asdfq.jsp" />
-        <option value="$PROJECT_DIR$/web/RealMain.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d0be9efa-66cf-42bc-859f-4f2e9dab8b03/console.sql" />
         <option value="$PROJECT_DIR$/src/user/User.java" />
+        <option value="$PROJECT_DIR$/web/Search.jsp" />
+        <option value="$PROJECT_DIR$/web/BookSearch.jsp" />
         <option value="$PROJECT_DIR$/web/JoinIn.jsp" />
         <option value="$PROJECT_DIR$/web/LoginMain.jsp" />
-        <option value="$PROJECT_DIR$/web/Search.jsp" />
+        <option value="$PROJECT_DIR$/web/RealMain.jsp" />
       </list>
     </option>
   </component>
@@ -167,7 +175,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -213,7 +221,8 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,8 +267,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,11 +283,12 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Oracle" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\Desktop\BooksManagement-WAP\web" />
+      <recent name="C:\Users\jin\Documents\BooksManagement-WAP\web" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\USER\Desktop\BooksManagement-WAP\web\WEB-INF" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jin\Documents\BooksManagement-WAP\web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -626,14 +635,15 @@
       <workItem from="1516459967307" duration="11067000" />
       <workItem from="1516475477880" duration="278000" />
       <workItem from="1516810609732" duration="1184000" />
+      <workItem from="1517574370014" duration="262000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27984000" />
+    <option name="totallyTimeSpent" value="28246000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-7" y="0" width="697" height="735" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -644,20 +654,20 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41350907" sideWeight="0.5030257" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2701812" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2701812" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30862328" sideWeight="0.47940692" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30862328" sideWeight="0.5205931" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27943486" sideWeight="0.47324416" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27943486" sideWeight="0.52675587" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22605966" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -699,6 +709,74 @@
     <entry file="file://$PROJECT_DIR$/web/RealMain.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
+          <caret line="50" column="42" lean-forward="false" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/LoginMain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="53" lean-forward="false" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/BookSearch.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/RequestCertifyEmail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/JoinIn.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1516459953939" expanded="true" signature="4686:4806" ph="insert into member... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/RequestCertifyEmail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/RealMain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
           <caret line="50" column="42" lean-forward="true" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
           <folding />
         </state>
@@ -708,7 +786,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="27" column="53" lean-forward="false" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -774,7 +854,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="29" column="55" lean-forward="true" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -832,7 +914,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1387">
           <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -925,7 +1009,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -933,6 +1016,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/BookSearch.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="89" column="7" lean-forward="false" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/JoinIn.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+          <folding>
+            <marker date="1516459953939" expanded="true" signature="4686:4806" ph="insert into member... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/LoginMain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="40" column="7" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/RealMain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="74" column="7" lean-forward="false" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -945,37 +1064,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/BookSearch.jsp">
+    <entry file="file://$PROJECT_DIR$/web/BorrowingExtensionReservation.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/LoginMain.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="53" lean-forward="false" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/RealMain.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="50" column="42" lean-forward="false" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/JoinIn.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="113" column="47" lean-forward="false" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
-          <folding>
-            <marker date="1516459953939" expanded="true" signature="4686:4806" ph="insert into member... " />
-          </folding>
         </state>
       </provider>
     </entry>

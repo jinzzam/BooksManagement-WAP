@@ -29,6 +29,24 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script>
+        function radioCheck(objName) {
+            var radio = document.all[objName];
+
+            var bCheck = false;
+            for(var i=0; i<radio.length; i++){
+                if(radio[i].checked == true){
+                    alert(radio[i].value);
+                    bCheck = true;
+                }
+            }
+            if(bCheck == false){
+                alert("선택된 값이 없습니다.");
+                radio[0].focus();
+            }
+        }
+    </script>
 </head>
 <body>
 <h2>WAP 도서관 회원가입</h2>
@@ -53,13 +71,13 @@
                 <div class="radio">
                     <label class="pull-left">
                         <div class="pull-left">
-                            <input type="radio" name="gender">
+                            <input type="radio" name="gender" value="f">
                             여자
                         </div>
                     </label>
                     <label class="pull-right">
                         <div class="pull-right">
-                            <input type="radio" name="gender">
+                            <input type="radio" name="gender" value="m">
                             남자
                         </div>
                     </label>
@@ -110,6 +128,8 @@
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
 
+        System.out.println(gender);
+
         String sql = "insert into member (name, birthday, gender, id, password, email, phone)" +
                 "values (?, ?, ?, ?, ?, ?, ?)";
 
@@ -128,8 +148,8 @@
         e.printStackTrace();
     }
 
-%>
 
+%>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

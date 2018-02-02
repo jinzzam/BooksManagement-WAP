@@ -26,3 +26,11 @@ select * from book;
 drop table book;
 
 select name from book;
+
+
+create or replace type project_type as object(
+name varchar2(50),
+role varchar2(20)
+);
+
+create type project_table as table of project_type;

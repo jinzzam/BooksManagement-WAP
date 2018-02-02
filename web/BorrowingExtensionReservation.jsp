@@ -1,30 +1,19 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: jin
+  Date: 2018-01-14
+  Time: 오전 2:30
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<!doctype html>
-<html lang="ko-kr">
+<html>
 <head>
-    <meta charset="utf-8">
     <meta name="viewport" content="width = device-width" initial-scale = "1">
-    <link rel = "stylesheet" href="./css/bootstrap.min.css">
-    <title>WAP 도서관</title>
-    <!-- Bootstrap -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/kfonts2.css" rel="stylesheet">
-    <style>
-        body { padding-top: 20px; }
-    </style>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel = "stylesheet" href="css/bootstrap.min.css">
+    <title>WAP LIBRARY</title>
 </head>
 <body>
-<%
-    String id = request.getParameter("id");
-    String password = request.getParameter("password");
-%>
 <nav class = "navbar navbar-default">
     <div class = "navbar-header">
         <button type="button" class = "navbar-toggle collapsed"
@@ -62,14 +51,21 @@
         </ul>
     </div>
 </nav>
-<article>
-    <%=id%>님 반갑습니다!<br>
-    비밀번호 (디버그용) : <%=password%>
-</article>
-</div> <!-- container 끝 -->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="./js/bootstrap.min.js"></script>
+<div class="container">
+    <h3>대출/연장/예약</h3>
+    <div class="row">
+     <div class="col-xs-2">
+        <nav class="nav-sidebar">
+            <ul class="nav">
+                <li class="active"><a href="BorrowingExtension.jsp">대출/연장 현황</a></li>
+                <li class=""><a href="BorrowingReturn.jsp">대출/반납 기록</a></li>
+                <li class=""><a href="Reservation.jsp">    예약</a></li>
+            </ul>
+        </nav>
+     </div>
+    </div>
+</div>
+<script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src = "js/bootstrap.min.js"></script>
 </body>
 </html>

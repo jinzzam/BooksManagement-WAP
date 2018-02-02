@@ -112,8 +112,6 @@
 <%
     Connection conn = null;
 
-
-
     try{
         String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:xe";
         String dbId = "system";

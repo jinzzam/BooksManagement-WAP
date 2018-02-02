@@ -38,7 +38,7 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li><a href="BookSearch.jsp">자료 검색</a></li>
+            <li><a href="BookSearchForm.jsp">자료 검색</a></li>
             <li><a href="bbs.jsp">도서관 서비스</a></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">내 정보</a>

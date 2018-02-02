@@ -6,11 +6,25 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="44b27116-1883-440a-9ec1-2627618cf2d8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/JoinIn.jsp" afterPath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/JoinIn.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/docs/system.sql" afterPath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/docs/system.sql" />
+=======
+    <list default="true" id="cc3691b6-8a47-4f1d-930b-507277528f74" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/BookSearch.jsp" afterPath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/BookSearch.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/BorrowingExtensionReservation.jsp" afterPath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/BorrowingExtensionReservation.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/JoinIn.jsp" afterPath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/JoinIn.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/RealMain.jsp" afterPath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/RealMain.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/docs/system.sql" afterPath="$PROJECT_DIR$/out/artifacts/BooksManagement_WAP_war_exploded/docs/system.sql" />
+      <change beforePath="$PROJECT_DIR$/web/BookSearch.jsp" afterPath="$PROJECT_DIR$/web/BookSearch.jsp" />
+      <change beforePath="$PROJECT_DIR$/web/BorrowingExtensionReservation.jsp" afterPath="$PROJECT_DIR$/web/BorrowingExtensionReservation.jsp" />
+      <change beforePath="$PROJECT_DIR$/web/RealMain.jsp" afterPath="$PROJECT_DIR$/web/RealMain.jsp" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,6 +34,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="JoinIn.jsp" pinned="false" current-in-tab="false">
@@ -49,6 +64,84 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="BookSearchForm.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/BookSearchForm.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="68" column="14" lean-forward="true" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="LoginMain.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/LoginMain.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+=======
+      <file leaf-file-name="BookSearchPro.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/BookSearchPro.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="58" />
+              <folding>
+                <marker date="1517598001667" expanded="true" signature="786:822" ph="select name book" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookSearch.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/BookSearch.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+              <folding>
+                <marker date="1517598192238" expanded="true" signature="760:796" ph="select name book" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="system.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/docs/system.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-192">
+              <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+<<<<<<< HEAD
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="69" column="46" lean-forward="false" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+=======
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -57,18 +150,9 @@
       <file leaf-file-name="LoginMain.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/LoginMain.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="69" column="46" lean-forward="false" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+            <state relative-caret-position="-392">
+              <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
               <folding />
             </state>
           </provider>
@@ -76,6 +160,16 @@
       </file>
     </leaf>
   </component>
+<<<<<<< HEAD
+=======
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -87,6 +181,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/web/docs/system.sql" />
+        <option value="$PROJECT_DIR$/web/BookSearchForm.jsp" />
+        <option value="$PROJECT_DIR$/web/BookSearchPro.jsp" />
+        <option value="$PROJECT_DIR$/web/BookSearch.jsp" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -104,11 +205,15 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="548" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
+=======
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -125,9 +230,12 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+<<<<<<< HEAD
       <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="AndroidView" />
+=======
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,6 +246,7 @@
             <path>
               <item name="BooksManagement-WAP" type="b2602c69:ProjectViewProjectNode" />
               <item name="BooksManagement-WAP" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -148,6 +257,8 @@
             <path>
               <item name="BooksManagement-WAP" type="b2602c69:ProjectViewProjectNode" />
               <item name="BooksManagement-WAP" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -159,15 +270,22 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20306513" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/apache-tomcat-8.5.24-windows-x64/apache-tomcat-8.5.24/lib/websocket-api.jar!/" />
+=======
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Oracle" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -181,7 +299,11 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager">
+=======
+  <component name="RunManager" selected="Tomcat Server.LoginMain.jsp (1)">
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -257,9 +379,14 @@
       <properties />
       <listeners />
     </configuration>
+<<<<<<< HEAD
     <configuration name="LoginMain.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 8.5.241" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/LoginMain.jsp" />
       <option name="UPDATING_POLICY" value="restart-server" />
+=======
+    <configuration name="LoginMain.jsp (1)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 8.5.24" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/LoginMain.jsp" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
       <deployment>
         <artifact name="BooksManagement-WAP:war exploded">
           <settings>
@@ -268,8 +395,12 @@
         </artifact>
       </deployment>
       <server-settings>
+<<<<<<< HEAD
         <option name="BASE_DIRECTORY_NAME" value="_BooksManagement-WAP_3" />
         <option name="HTTP_PORT" value="8090" />
+=======
+        <option name="BASE_DIRECTORY_NAME" value="LoginMain_jsp_(1)_BooksManagement-WAP" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -277,6 +408,7 @@
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+<<<<<<< HEAD
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="54705" />
       </RunnerSettings>
@@ -296,6 +428,9 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+=======
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
           <option name="USE_DEFAULT" value="true" />
@@ -310,6 +445,31 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
+<<<<<<< HEAD
+=======
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="BooksManagement-WAP:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="LoginMain.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 8.5.24" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/LoginMain.jsp" />
+      <deployment>
+        <artifact name="BooksManagement-WAP:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -331,6 +491,7 @@
         </option>
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.24" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8090/" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -394,15 +555,28 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
     </configuration>
+=======
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
+<<<<<<< HEAD
     <recent_temporary>
       <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Tomcat Server.LoginMain.jsp" />
+=======
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.LoginMain.jsp" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.LoginMain.jsp (1)" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Tomcat Server.LoginMain.jsp (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Tomcat Server.LoginMain.jsp" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
       </list>
     </recent_temporary>
   </component>
@@ -414,29 +588,50 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="44b27116-1883-440a-9ec1-2627618cf2d8" name="Default" comment="" />
       <created>1517590387975</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517590387975</updated>
       <workItem from="1517590389294" duration="2855000" />
+=======
+      <changelist id="cc3691b6-8a47-4f1d-930b-507277528f74" name="Default" comment="" />
+      <created>1517585209645</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1517585209645</updated>
+      <workItem from="1517585211050" duration="4523000" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="2855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="4523000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3003413" sideWeight="0.49375" order="-1" side_tool="false" content_ui="tabs" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -446,6 +641,17 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32992035" sideWeight="0.40104166" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4975018" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32992035" sideWeight="0.5989583" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1640625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -473,10 +679,25 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/web/BookSearch.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/web/docs/system.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/LoginMain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-392">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
           <folding />
         </state>
       </provider>
@@ -489,6 +710,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/web/JoinIn.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2702">
@@ -512,17 +734,50 @@
         <state relative-caret-position="133">
           <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/web/BookSearchForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="68" column="14" lean-forward="true" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/BookSearchPro.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="58" />
+          <folding>
+            <marker date="1517598001667" expanded="true" signature="786:822" ph="select name book" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/BookSearch.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+          <folding>
+            <marker date="1517598192238" expanded="true" signature="760:796" ph="select name book" />
+          </folding>
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="343">
           <caret line="69" column="46" lean-forward="false" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+=======
+        <state relative-caret-position="496">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
   </component>
   <component name="masterDetails">
     <states>
@@ -600,5 +855,7 @@
         </settings>
       </state>
     </states>
+=======
+>>>>>>> 7d567facc88036d39b9a38e1d62dab362e1bd716
   </component>
 </project>

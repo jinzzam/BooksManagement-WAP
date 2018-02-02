@@ -51,20 +51,24 @@
         </ul>
     </div>
 </nav>
-<div class="container">
-    <h3>대출/연장/예약</h3>
-    <div class="row">
-     <div class="col-xs-2">
-        <nav class="nav-sidebar">
-            <ul class="nav">
-                <li class="active"><a href="BorrowingExtension.jsp">대출/연장 현황</a></li>
-                <li class=""><a href="BorrowingReturn.jsp">대출/반납 기록</a></li>
-                <li class=""><a href="Reservation.jsp">    예약</a></li>
-            </ul>
-        </nav>
-     </div>
+<h2>WAP 도서관 검색</h2>
+<br/>
+<form method="get" action="BookSearchPro.jsp">
+    <div class="container ">
+        <div class="row">
+                <div class="jumbotron center-block" style="height: 200px; width: 1000px; padding: 70px 200px;">
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="form-control input-lg" name="searchbook" placeholder="자료를 입력하세요" />
+                        <span class="input-group-btn">
+                        <button type="submit" class="btn btn-info btn-lg" type="button">검색</button>
+                    </span>
+                    </div>
+                </div>
+                </div>
+        </div>
     </div>
-</div>
+</form>
 <script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src = "js/bootstrap.min.js"></script>
 </body>

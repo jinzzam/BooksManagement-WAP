@@ -70,7 +70,40 @@
     </div>
 </div>
 </form>
+<%
+    Connection conn=null;
 
+    try{
+        String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:xe";
+        String dbId = "system";
+        String dbPass = "pass";
+
+        Class.forName("oracle.jdbc.driver.OracleDriver");
+        conn = DriverManager.getConnection(jdbcUrl, dbId, dbPass);
+        out.println("제대로 연결되었습니다.<br>");
+        String name = request.getParameter("name");
+        String id = request.getParameter("id");
+        String password = request.getParameter("password");
+        String email = request.getParameter("email");
+        String phone = request.getParameter("phone");
+
+        String sql = "insert into member values('"+ name +"','"+ id +"','" + password +"','" + email +"','"+ phone +"')";
+
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, name);
+        pstmt.setString(2, id);
+        pstmt.setString(3, password);
+        pstmt.setString(4, email);
+        pstmt.setString(5, phone);
+
+        pstmt.executeUpdate();
+        pstmt.close();
+    } catch (Exception e){
+        e.printStackTrace();
+    }
+
+
+%>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

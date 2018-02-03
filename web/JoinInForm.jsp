@@ -70,8 +70,9 @@
     </div>
 </div>
 </form>
+<%
+    Connection conn=null;
 
-<<<<<<< HEAD
     try{
         String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:xe";
         String dbId = "system";
@@ -103,8 +104,6 @@
 
 
 %>
-=======
->>>>>>> 2993a4921480c32670409a5a91307f2f3872718c
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

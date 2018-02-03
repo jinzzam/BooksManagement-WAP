@@ -10,6 +10,7 @@
 </head>
 <body>
 <%
+    request.setCharacterEncoding("utf-8"); // ÇÑ±Û±úÁüÇö»ó ¹Ù·ÎÀâÀ½
     String url = "jdbc:oracle:thin:@localhost:1521:xe";
     String user = "system";
     String pass = "pass";
@@ -23,8 +24,7 @@
 
     String name = request.getParameter("name");
     out.println(name);
-    String sql = "select * from book where name ="+"'name'";
-    stmt = conn.createStatement();
+    String sql = "select * from book";
     pstmt=conn.prepareStatement(sql);
     rs=pstmt.executeQuery();
     out.println("<table border=\"1\">");

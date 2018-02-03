@@ -23,8 +23,10 @@
 
     String name = request.getParameter("name");
     out.println(name);
-    String sql = "select * from book";
+
+    String sql = "select * from book where name = '"+name+"'";
     pstmt=conn.prepareStatement(sql);
+
     rs=pstmt.executeQuery();
     out.println("<table border=\"1\">");
     while(rs.next()){

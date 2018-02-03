@@ -25,10 +25,15 @@
         Class.forName("oracle.jdbc.driver.OracleDriver");
         conn = DriverManager.getConnection(jdbcUrl,dbId,dbPass);
 
-        String sql = "select * from book where name = ?";
+        String sql = "select no from book where name like '뇌를 자극하는 알고리즘'";
         PreparedStatement pstmt = conn.prepareStatement(sql);
 
         ResultSet rs = pstmt.executeQuery();
+
+        String no = rs.getString("no");
+        out.println(no);
+
+
         while(rs.next()){
             out.println(rs.getString("bigfield")+" ");
             out.println(rs.getString("no")+" ");

@@ -21,10 +21,7 @@
     <![endif]-->
 </head>
 <body>
-<%
-    String id = request.getParameter("id");
-    String password = request.getParameter("password");
-%>
+
 <nav class = "navbar navbar-default">
     <div class = "navbar-header">
         <button type="button" class = "navbar-toggle collapsed"
@@ -56,6 +53,14 @@
         </ul>
     </div>
 </nav>
+
+<%
+    String id = request.getParameter("id");
+    String password = request.getParameter("password");
+    out.println(id);
+    out.println(password);
+%>
+
 <article>
     <%=id%>님 반갑습니다!<br>
     비밀번호 (디버그용) : <%=password%>

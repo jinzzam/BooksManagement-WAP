@@ -24,7 +24,7 @@
     String name = request.getParameter("name");
     out.println(name);
 
-    String sql = "select * from book where name = '"+name+"'";
+    String sql = "select * from book where name like '%"+name+"%'";
     pstmt=conn.prepareStatement(sql);
 
     rs=pstmt.executeQuery();
@@ -39,6 +39,8 @@
     }
     out.println("</table>");
 
+    rs.close();
+    pstmt.close();
     conn.close();
 %>
 

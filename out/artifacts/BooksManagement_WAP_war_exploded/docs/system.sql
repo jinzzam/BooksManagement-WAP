@@ -1,14 +1,13 @@
 create table member(
 name varchar2(20) not null,
 birthday varchar2(8),
-gender varchar2(1) not null,
+gender varchar2(2) not null,
 id varchar2(30) primary key,
 password varchar2(30) not null,
 email varchar2(80) not null,
 phone varchar2(11));
 
 select * from member;
-drop table member;
 commit;
 
 create table book(
@@ -23,14 +22,5 @@ checkoutdate varchar2(10),
 checkedout varchar2(20));
 
 select * from book;
-drop table book;
-
 select name from book;
-
-
-create or replace type project_type as object(
-name varchar2(50),
-role varchar2(20)
-);
-
-create type project_table as table of project_type;
+select no from book where name = '³ú¸¦ ÀÚ±ØÇÏ´Â ¾Ë°í¸®Áò';

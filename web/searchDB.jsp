@@ -47,7 +47,7 @@
                 String no = rs.getString("no");
                 String author = rs.getString("author");
 
-                out.println("아아아아");
+                out.println("sdferf");
                 out.println(bookname);
                 out.println(no);
                 out.println(author);

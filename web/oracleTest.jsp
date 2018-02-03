@@ -15,7 +15,6 @@
     String user = "system";
     String pass = "pass";
     Connection conn;
-    Statement  stmt;
     PreparedStatement pstmt;
     ResultSet rs;
 

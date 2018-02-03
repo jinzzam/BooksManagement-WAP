@@ -13,7 +13,7 @@
     request.setCharacterEncoding("utf-8"); // 한글깨짐현상 바로잡음
     String url = "jdbc:oracle:thin:@localhost:1521:xe";
     String user = "system";
-    String pass = "bmwbmw";
+    String pass = "pass";
     Connection conn;
     PreparedStatement pstmt;
     ResultSet rs;

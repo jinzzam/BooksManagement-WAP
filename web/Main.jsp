@@ -84,7 +84,7 @@
 
        if(password.equals(pass)){
            out.println("<script>");
-           out.println("alert('로그인 되었습니다. 환영합니다. :)'");
+           out.println("alert('로그인 되었습니다. 환영합니다. :)')");
            out.println("</script>");
        } else{
            out.println("<script>");

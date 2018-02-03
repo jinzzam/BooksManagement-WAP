@@ -33,12 +33,11 @@
 </head>
 <body>
 <h2>WAP 도서관 회원가입</h2>
-
+<form method="post" action="JoinInPro.jsp" accept-charset="UTF-8">
 <div class="container">
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
         <div class="jumbotron" style="padding-top: 20px;">
-            <form method="post" action="RequestCertifyEmail.jsp">
                 <h3 style="text-align: center;">PLEASE JOIN US</h3>
                     <br/>
                 <div class="input-group">
@@ -66,19 +65,18 @@
                     <input type="number" class="form-control" placeholder="핸드폰 번호" name="phone">
                 </div>
                 <br>
-                <input type="submit" class="btn btn-primary form-control" value="JOIN !">
-            </form>
+                <button type="submit" class="btn btn-primary form-control" value="JOIN !">
         </div>
     </div>
 </div>
-
+</form>
 <%
     Connection conn = null;
 
     try{
         String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:xe";
         String dbId = "system";
-        String dbPass = "pass";
+        String dbPass = "bmwbmw";
 
         Class.forName("oracle.jdbc.driver.OracleDriver");
         conn = DriverManager.getConnection(jdbcUrl, dbId, dbPass);
@@ -89,8 +87,7 @@
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
 
-        String sql = "insert into member (name, id, password, email, phone)" +
-                "values (?, ?, ?, ?, ?)";
+        String sql = "insert into member values('"+ name +"','"+ id +"','" + password +"','" + email +"','"+ phone +"')";
 
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, name);

@@ -30,7 +30,7 @@
 
                 <input type="submit" class="btn btn-primary form-control" value="로그인">
             </form>
-            <form method="post" action="JoinIn.jsp">
+            <form method="post" action="JoinInForm.jsp">
                 <input type="submit" class="btn btn-primary form-control" value="회원가입">
             </form>
         </div>

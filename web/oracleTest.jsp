@@ -22,12 +22,12 @@
     stmt = conn.createStatement();
     pstmt=conn.prepareStatement("select * from book");
     rs=pstmt.executeQuery();
-    System.out.println("<table border=\"1\">");
+    out.println("<table border=\"1\">");
     while(rs.next()){
-        System.out.println("<tr>");
-        System.out.println("<td>"+rs.getString("no")+"</td>");
-        System.out.println("<td>"+rs.getString("name")+"</td>");
-        System.out.println("<td>"+rs.getString("author")+"</td>");
+        out.println("<tr>");
+        out.println("<td>"+rs.getString("no")+"</td>");
+        out.println("<td>"+rs.getString("name")+"</td>");
+        out.println("<td>"+rs.getString("author")+"</td>");
         System.out.println("<td>"+rs.getString("translator")+"</td>");
         System.out.println("</tr>");
     }

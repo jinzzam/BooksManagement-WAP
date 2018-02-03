@@ -30,23 +30,6 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script>
-        function radioCheck(objName) {
-            var radio = document.all[objName];
-
-            var bCheck = false;
-            for(var i=0; i<radio.length; i++){
-                if(radio[i].checked == true){
-                    alert(radio[i].value);
-                    bCheck = true;
-                }
-            }
-            if(bCheck == false){
-                alert("선택된 값이 없습니다.");
-                radio[0].focus();
-            }
-        }
-    </script>
 </head>
 <body>
 <h2>WAP 도서관 회원가입</h2>
@@ -57,32 +40,12 @@
         <div class="jumbotron" style="padding-top: 20px;">
             <form method="post" action="RequestCertifyEmail.jsp">
                 <h3 style="text-align: center;">PLEASE JOIN US</h3>
-
+                    <br/>
                 <div class="input-group">
                     <span class="input-group-addon"> <span class="glyphicon glyphicon-user"> </span> </span>
                     <input type="text" class="form-control" placeholder="이 름" name="name">
                 </div>
-                <br>
-                <div class="input-group">
-                    <span class="input-group-addon">  <span class="glyphicon glyphicon-heart"></span> </span>
-                    <input type="date" class="form-control" placeholder="생년월일" name="birthday">
-                </div>
-                <br>
-                <div class="radio">
-                    <label class="pull-left">
-                        <div class="pull-left">
-                            <input type="radio" name="gender" value="f">
-                            여자
-                        </div>
-                    </label>
-                    <label class="pull-right">
-                        <div class="pull-right">
-                            <input type="radio" name="gender" value="m">
-                            남자
-                        </div>
-                    </label>
-                </div>
-                <br>
+                <br/>
                 <div class="input-group">
                     <span class="input-group-addon"> <span class="glyphicon glyphicon-user"> </span> </span>
                     <input type="text" class="form-control" placeholder="아이디" name="id">
@@ -121,26 +84,20 @@
         conn = DriverManager.getConnection(jdbcUrl, dbId, dbPass);
         out.println("제대로 연결되었습니다.<br>");
         String name = request.getParameter("name");
-        String birthday = request.getParameter("birthday");
-        String gender = request.getParameter("gender");
         String id = request.getParameter("id");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
 
-        System.out.println(gender);
-
-        String sql = "insert into member (name, birthday, gender, id, password, email, phone)" +
-                "values (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "insert into member (name, id, password, email, phone)" +
+                "values (?, ?, ?, ?, ?)";
 
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, name);
-        pstmt.setString(2, birthday);
-        pstmt.setString(3, gender);
-        pstmt.setString(4, id);
-        pstmt.setString(5, password);
-        pstmt.setString(6, email);
-        pstmt.setString(7, phone);
+        pstmt.setString(2, id);
+        pstmt.setString(3, password);
+        pstmt.setString(4, email);
+        pstmt.setString(5, phone);
 
         pstmt.executeUpdate();
         pstmt.close();

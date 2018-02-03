@@ -1,6 +1,4 @@
-<%@ page import="java.sql.Connection" %>
-<%@ page import="java.sql.DriverManager" %>
-<%@ page import="java.sql.PreparedStatement" %><%--
+<%@ page import="java.sql.*" %><%--
   Created by IntelliJ IDEA.
   User: jin
   Date: 2018-02-03
@@ -14,29 +12,32 @@
 </head>
 <body>
 <%
+    String bf,no;
     Connection conn = null;
+    PreparedStatement pstmt = null;
+    ResultSet rs;
 
-    try{
         String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:xe";
         String dbId = "system";
-        String dbPass = "pass";
+        String dbPass = "bmwbmw";
 
         Class.forName("oracle.jdbc.driver.OracleDriver");
         conn = DriverManager.getConnection(jdbcUrl, dbId, dbPass);
 
-        String searchbook = request.getParameter("searchbook");
-        String sql = "select name from book where name = ?";
-        PreparedStatement pstmt = conn.prepareStatement(sql);
-        pstmt.setString(1, searchbook);
+        pstmt = conn.prepareStatement("SELECT NAME FROM BOOK WHERE NAME=?");
+        pstmt.setString(1, "searchbook");
 
-        pstmt.executeUpdate();
+        rs = pstmt.executeQuery();
+
+        while(rs.next()){
+            bf = rs.getString(1);
+            no = rs.getString(2);
+            System.out.println(bf+no);
+        }
+        rs.close();
         pstmt.close();
+        conn.close();
 
-    } catch(Exception e){
-        e.printStackTrace();
-    }
-
-    response.sendRedirect("BookSearch.jsp");
 %>
 </body>
 </html>

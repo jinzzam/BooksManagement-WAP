@@ -31,7 +31,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="RealMain.jsp">WAP 도서관</a>
+        <a class="navbar-brand" href="Main.jsp">WAP 도서관</a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -48,7 +48,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a href="LoginMain.jsp" role="button" aria-haspopup="true" aria-expanded="false">로그아웃<span class="caret"></span></a>
+                <a href="Login.jsp" role="button" aria-haspopup="true" aria-expanded="false">로그아웃<span class="caret"></span></a>
             </li>
         </ul>
     </div>

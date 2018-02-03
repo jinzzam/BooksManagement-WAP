@@ -11,7 +11,7 @@
 <%
     String url = "jdbc:oracle:thin:@localhost:1521:xe";
     String user = "system";
-    String pass = "pass";
+    String pass = "bmwbmw";
     Connection conn;
     Statement  stmt;
     PreparedStatement pstmt;
@@ -28,8 +28,9 @@
         out.println("<td>"+rs.getString("no")+"</td>");
         out.println("<td>"+rs.getString("name")+"</td>");
         out.println("<td>"+rs.getString("author")+"</td>");
-        System.out.println("<td>"+rs.getString("translator")+"</td>");
-        System.out.println("</tr>");
+        out.println("<td>"+rs.getString("translator")+"</td>");
+        out.println("</tr>");
+
     }
     out.println("</table>");
 

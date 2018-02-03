@@ -4,7 +4,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Insert title here</title>
 </head>
 <body>
@@ -19,8 +20,12 @@
 
     Class.forName("oracle.jdbc.driver.OracleDriver");
     conn = DriverManager.getConnection(url, user, pass);
+
+    String name = request.getParameter("name");
+    out.println(name);
+    String sql = "select * from book where name ="+"'name'";
     stmt = conn.createStatement();
-    pstmt=conn.prepareStatement("select * from book");
+    pstmt=conn.prepareStatement(sql);
     rs=pstmt.executeQuery();
     out.println("<table border=\"1\">");
     while(rs.next()){

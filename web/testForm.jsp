@@ -11,7 +11,7 @@
     <title>Test</title>
 </head>
 <body>
-<form action="post" action="searchDB.jsp">
+<form method="post" action="oracleTest.jsp">
     검색할 도서 : <input type="text" name="name">
     <input type="submit" value="검색">
 </form>

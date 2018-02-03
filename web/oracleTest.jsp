@@ -11,7 +11,7 @@
 <%
     String url = "jdbc:oracle:thin:@localhost:1521:xe";
     String user = "system";
-    String pass = "bmwbmw";
+    String pass = "pass";
     Connection conn;
     Statement  stmt;
     PreparedStatement pstmt;
@@ -22,16 +22,16 @@
     stmt = conn.createStatement();
     pstmt=conn.prepareStatement("select * from book");
     rs=pstmt.executeQuery();
-    System.out.println("<table border=\"1\">");
+    out.println("<table border=\"1\">");
     while(rs.next()){
-        System.out.println("<tr>");
-        System.out.println("<td>"+rs.getString("no")+"</td>");
-        System.out.println("<td>"+rs.getString("name")+"</td>");
-        System.out.println("<td>"+rs.getString("author")+"</td>");
-        System.out.println("<td>"+rs.getString("translator")+"</td>");
-        System.out.println("</tr>");
+        out.println("<tr>");
+        out.println("<td>"+rs.getString("no")+"</td>");
+        out.println("<td>"+rs.getString("name")+"</td>");
+        out.println("<td>"+rs.getString("author")+"</td>");
+        out.println("<td>"+rs.getString("translator")+"</td>");
+        out.println("</tr>");
     }
-    System.out.println("</table>");
+    out.println("</table>");
 
     conn.close();
 %>

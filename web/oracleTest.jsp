@@ -4,23 +4,29 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Insert title here</title>
 </head>
 <body>
 <%
+    request.setCharacterEncoding("utf-8"); // 한글깨짐현상 바로잡음
     String url = "jdbc:oracle:thin:@localhost:1521:xe";
     String user = "system";
     String pass = "bmwbmw";
     Connection conn;
-    Statement  stmt;
     PreparedStatement pstmt;
     ResultSet rs;
 
     Class.forName("oracle.jdbc.driver.OracleDriver");
     conn = DriverManager.getConnection(url, user, pass);
-    stmt = conn.createStatement();
-    pstmt=conn.prepareStatement("select * from book");
+
+    String name = request.getParameter("name");
+    out.println(name);
+
+    String sql = "select * from book where name like '%"+name+"%'";
+    pstmt=conn.prepareStatement(sql);
+
     rs=pstmt.executeQuery();
     out.println("<table border=\"1\">");
     while(rs.next()){
@@ -34,6 +40,8 @@
     }
     out.println("</table>");
 
+    rs.close();
+    pstmt.close();
     conn.close();
 %>
 

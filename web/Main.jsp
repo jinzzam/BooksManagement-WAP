@@ -67,7 +67,7 @@
     try{
         String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:xe";
         String dbId = "system";
-        String dbPass = "bmwbmw";
+        String dbPass = "pass";
 
         Class.forName("oracle.jdbc.driver.OracleDriver");
         conn = DriverManager.getConnection(jdbcUrl, dbId, dbPass);

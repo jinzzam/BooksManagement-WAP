@@ -70,13 +70,21 @@
     rs=pstmt.executeQuery();
     %>
     <table border="1">
-    <%while(rs.next()){%>
+    <%while(rs.next()){
+    String available = rs.getString("available");
+    String unavail = "1";
+    %>
         <tr>
         <td><%=rs.getString("no")%></td>
         <td><%=rs.getString("name")%></td>
         <td><%=rs.getString("author")%></td>
         <td><%=rs.getString("translator")%></td>
-            <td><input type = "button" value ="대여"></td>
+            <td><%=available%></td>
+            <%if(!unavail.equals(available)) {%>
+            <td><input type = "button" value ="대여하기"></td>
+            <%} else{%>
+            <td>대여불가</td>
+            <%}%>
         </tr>
     <%}%>
     </table>

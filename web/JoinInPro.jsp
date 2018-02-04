@@ -16,7 +16,6 @@
     String pass = "pass";
     Connection conn;
     Statement stmt;
-    ResultSet rs;
     String vName,vId,vPwd,vEmail,vPhone;
 
     conn = DriverManager.getConnection(url, user, pass);
@@ -47,10 +46,10 @@
             </script>
 <%
 }
-    %>
     stmt.close();
     conn.close();
-
+    %>
+    <script>location.href = "Login.jsp";</script>
 
 
 </body>

@@ -35,9 +35,6 @@
     <title>WAP LIBRARY</title>
 </head>
 <body>
-<%
-    if(session.getAttribute("id") == null){
-%>
 
 <h2>Welcome to WAP library</h2>
 <div class="container">
@@ -62,10 +59,7 @@
         </div>
     </div>
 </div>
-<%} else {
-    response.sendRedirect("Main.jsp");
-}
-%>
+
 
 <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

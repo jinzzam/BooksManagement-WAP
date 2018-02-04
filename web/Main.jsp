@@ -50,16 +50,62 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a href="Login.jsp" role="button" aria-haspopup="true" aria-expanded="false">로그아웃<span class="caret"></span></a>
+                <input type="button" aria-haspopup="true" aria-expanded="false">로그아웃
+                <%
+                    session.invalidate();
+                    response.sendRedirect("Login.jsp");
+                %>
+                </input>
             </li>
         </ul>
     </div>
 </nav>
 
+<%
+    request.setCharacterEncoding("utf-8");
+
+    String id = request.getParameter("id");
+    String pass = request.getParameter("password");
+
+    Connection conn = null;
+
+    try {
+        String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:xe";
+        String dbId = "system";
+        String dbPass = "pass";
+
+        Class.forName("oracle.jdbc.driver.OracleDriver");
+        conn = DriverManager.getConnection(jdbcUrl, dbId, dbPass);
+
+        String sql = "select * from member where id = ?";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, id);
+        ResultSet rs = pstmt.executeQuery();
+        rs.next();
+        String password = rs.getString("password");
+        rs.close();
+        pstmt.close();
+        conn.close();
+
+        if (password.equals(pass)) {
+            out.println("<script>");
+            out.println("alert('로그인 되었습니다. 환영합니다. :)')");
+            out.println("</script>");
+        } else {
+            out.println("<script>");
+            out.println("alert('정보가 틀렸습니다!')");
+            out.println("</script>");
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+%>
+
+
 id와 password 세션 속성을 설정하였습니다.<br>
 
-<%=(String)session.getAttribute("id")%>님 반갑습니다 !<br>
-(디버그용)비밀번호는 <%=(String)session.getAttribute("password")%>입니다.<br>
+<%=id%>님 반갑습니다 !<br>
+(디버그용)비밀번호는 <%=pass%>입니다.<br>
 </div> <!-- container 끝 -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

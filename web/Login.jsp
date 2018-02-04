@@ -26,18 +26,13 @@
                 obj.password.focus();
                 return false;
             }
+            return true;
         }
     </script>
-
-
-
 
     <title>WAP LIBRARY</title>
 </head>
 <body>
-<%
-    if(session.getAttribute("id") == null){
-%>
 
 <h2>Welcome to WAP library</h2>
 <div class="container">
@@ -45,7 +40,7 @@
     <div class="col-lg-4">
         <div class="jumbotron" style="padding-top: 20px;">
             <h3 style="text-align: center;">로그인 화면</h3>
-            <form method="post" action="LoginPro.jsp" onsubmit="return formCheck(this)">
+            <form method="post" action="Main.jsp">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="아이디" name="id" maxlength="20">
                 </div>
@@ -62,10 +57,6 @@
         </div>
     </div>
 </div>
-<%} else {
-    response.sendRedirect("Main.jsp");
-}
-%>
 
 <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

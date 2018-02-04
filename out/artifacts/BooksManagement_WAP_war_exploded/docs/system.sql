@@ -1,14 +1,16 @@
-create table member(
+create table  member(
 name varchar2(20) not null,
-birthday varchar2(8),
-gender varchar2(2) not null,
 id varchar2(30) primary key,
 password varchar2(30) not null,
 email varchar2(80) not null,
-phone varchar2(11));
+phone varchar2(11) not null);
 
+insert into member values('박유진', 'youjin', '123123', 'firstmind_@naver.com', '01057192212');
+insert into member values('이정민', 'jungmin', '234234', 'min@naver.com', '01012341234');
 select * from member;
+drop table member;
 commit;
+
 
 create table book(
 bigfield varchar2(40) not null,
@@ -23,4 +25,4 @@ checkedout varchar2(20));
 
 select * from book;
 select name from book;
-select no from book where name = '뇌를 자극하는 알고리즘';
+select * from book where name='Head First Java';

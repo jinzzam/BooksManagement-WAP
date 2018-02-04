@@ -24,7 +24,7 @@
     <div class="col-lg-4">
         <div class="jumbotron" style="padding-top: 20px;">
             <h3 style="text-align: center;">로그인 화면</h3>
-            <form method="post" action="Main.jsp">
+            <form method="post" action="LoginPro.jsp">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="아이디" name="id" maxlength="20">
                 </div>

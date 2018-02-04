@@ -26,9 +26,11 @@
                 obj.password.focus();
                 return false;
             }
-            return true;
         }
     </script>
+
+
+
 
     <title>WAP LIBRARY</title>
 </head>
@@ -40,7 +42,7 @@
     <div class="col-lg-4">
         <div class="jumbotron" style="padding-top: 20px;">
             <h3 style="text-align: center;">로그인 화면</h3>
-            <form method="post" action="Main.jsp">
+            <form method="post" action="LoginPro.jsp" onsubmit="return formCheck(this)">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="아이디" name="id" maxlength="20">
                 </div>
@@ -57,10 +59,7 @@
         </div>
     </div>
 </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> a499ff9a6ce23b495833341f5187c3ec34f6a2c4
 
 <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

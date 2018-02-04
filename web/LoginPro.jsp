@@ -29,9 +29,9 @@
     <![endif]-->
 </head>
 <body>
+<%
+    request.setCharacterEncoding("utf-8");
 
-<<<<<<< HEAD
-=======
     String id = request.getParameter("id");
     String pass = request.getParameter("password");
 
@@ -112,6 +112,5 @@ id와 password 세션 속성을 설정하였습니다.<br>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="./js/bootstrap.min.js"></script>
->>>>>>> a499ff9a6ce23b495833341f5187c3ec34f6a2c4
 </body>
 </html>

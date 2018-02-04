@@ -26,3 +26,14 @@ checkedout varchar2(20));
 select * from book;
 select name from book;
 select * from book where name='Head First Java';
+
+create table list(
+borrower varchar2(10) not null,
+name varchar2(100) not null,
+no varchar2(20) not null,
+outdate varchar2(10),
+duedate varchar2(10),
+returndate varchar2(10),
+returntype varchar2(20));
+
+select * from list;

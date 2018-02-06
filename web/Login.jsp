@@ -31,6 +31,18 @@
 
 
     <title>WAP LIBRARY</title>
+    <style type="text/css">
+        #error{
+            color:red;
+            font-size: 10pt;
+        }
+    </style>
+    <%
+        String errMsg = (String)request.getAttribute("errMsg");
+        if(errMsg==null){
+            errMsg="";
+        }
+    %>
 </head>
 <body>
 
@@ -47,6 +59,7 @@
                 <div class="form-group">
                     <input type="password" class="form-control" placeholder="비밀번호" name="password" maxlength="20">
                 </div>
+                <div id = "error"><%=errMsg%></div>
 
                 <input type="submit" class="btn btn-primary form-control" value="로그인">
 

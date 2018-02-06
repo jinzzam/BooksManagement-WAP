@@ -56,7 +56,7 @@
 </nav>
 <h2>WAP 도서관 검색</h2>
 <br/>
-<form method="post" action="BookSearchPro.jsp" accept-charset="UTF-8">
+<form method="post" action="testBookSearchPro_jm.jsp" accept-charset="UTF-8">
     <div class="container ">
         <div class="row">
                 <div class="jumbotron center-block" style="height: 200px; width: 1000px; padding: 70px 200px;">

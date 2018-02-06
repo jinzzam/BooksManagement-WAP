@@ -1,20 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-         pageEncoding="EUC-KR"%>
+         pageEncoding="EUC-KR" %>
 <%@ page language="java" import="java.sql.*" %>
+<%@ page import="model.dao.BookDao" %>
+<%@ page import="model.dto.BookDto" %>
+<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta name="viewport" content="width = device-width" initial-scale = "1">
-    <link rel = "stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width = device-width" initial-scale="1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Insert title here</title>
     <style>
-        body { padding-top: 20px; }
+        body {
+            padding-top: 20px;
+        }
     </style>
 </head>
 <body>
-<nav class = "navbar navbar-default">
-    <div class = "navbar-header">
-        <button type="button" class = "navbar-toggle collapsed"
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
                 data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
                 aria-expanded="false">
             <span class="icon-bar"></span>
@@ -29,9 +34,9 @@
             <li><a href="bbs.jsp">도서관 서비스</a></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">내 정보</a>
-                <ul class = "dropdown-menu">
-                    <li><a href="#">개인정보관리</a> </li>
-                    <li><a href="BorrowingExtensionReservation.jsp">대출/연장/예약</a> </li>
+                <ul class="dropdown-menu">
+                    <li><a href="#">개인정보관리</a></li>
+                    <li><a href="BorrowingExtensionReservation.jsp">대출/연장/예약</a></li>
                 </ul>
             </li>
             <li><a href="bbs.jsp">도서관 이용안내</a></li>
@@ -43,57 +48,38 @@
                    aria-expanded="false">접속하기<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li class="active"><a href="Login.jsp">로그인</a></li>
-                    <li><a href="JoinInForm.jsp">회원가입</a> </li>
+                    <li><a href="JoinInForm.jsp">회원가입</a></li>
                 </ul>
             </li>
         </ul>
     </div>
 </nav>
 <%
-    request.setCharacterEncoding("utf-8"); // 한글깨짐현상 바로잡음
-    String url = "jdbc:oracle:thin:@localhost:1521:xe";
-    String user = "system";
-    String pass = "pass";
-    Connection conn;
-    PreparedStatement pstmt;
-    ResultSet rs;
 
-    Class.forName("oracle.jdbc.driver.OracleDriver");
-    conn = DriverManager.getConnection(url, user, pass);
+    request.setCharacterEncoding("utf-8");
+    BookDao bookDao = BookDao.getInstance();
+    System.out.println(request.getParameter("search-book"));
+    ArrayList<BookDto> bookDtoArr = bookDao.readName(request.getParameter("search-book"));
+    out.println(bookDtoArr);
 
-    String name = request.getParameter("searchbook");
-    out.println(name);
+//    String sql = "select * from book where name like '%"+name+"%'";
+%>
+<%--<table border="1">--%>
+    <%--<%--%>
+        <%--while (rs.next()) {--%>
+            <%--String available = rs.getString("available");--%>
+            <%--String unavail = "1";--%>
+    <%--%>--%>
 
-    String sql = "select * from book where name like '%"+name+"%'";
-    pstmt=conn.prepareStatement(sql);
-
-    rs=pstmt.executeQuery();
-    %>
-    <table border="1">
-    <%while(rs.next()){
-    String available = rs.getString("available");
-    String unavail = "1";
-    %>
-        <tr>
-        <td><%=rs.getString("no")%></td>
-        <td><%=rs.getString("name")%></td>
-        <td><%=rs.getString("author")%></td>
-        <td><%=rs.getString("translator")%></td>
-            <td><%=available%></td>
-            <%if(!unavail.equals(available)) {%>
-            <td><input type = "button" value ="대여하기"></td>
-            <%} else{%>
-            <td>대여불가</td>
-            <%}%>
-        </tr>
-    <%}%>
-    </table>
-   <%
-    rs.close();
-    pstmt.close();
-    conn.close();
-   %>
-
-
+    <%--<td><%=available%>--%>
+    <%--</td>--%>
+    <%--<%if (!unavail.equals(available)) {%>--%>
+    <%--<td><input type="button" value="대여하기"></td>--%>
+    <%--<%} else {%>--%>
+    <%--<td>대여불가</td>--%>
+    <%--<%}%>--%>
+    <%--</tr>--%>
+    <%--<%}%>--%>
+</table>
 </body>
 </html>

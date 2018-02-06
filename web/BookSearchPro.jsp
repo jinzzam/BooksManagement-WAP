@@ -61,25 +61,7 @@
     System.out.println(request.getParameter("search-book"));
     ArrayList<BookDto> bookDtoArr = bookDao.readName(request.getParameter("search-book"));
     out.println(bookDtoArr);
-
-//    String sql = "select * from book where name like '%"+name+"%'";
 %>
-<%--<table border="1">--%>
-    <%--<%--%>
-        <%--while (rs.next()) {--%>
-            <%--String available = rs.getString("available");--%>
-            <%--String unavail = "1";--%>
-    <%--%>--%>
-
-    <%--<td><%=available%>--%>
-    <%--</td>--%>
-    <%--<%if (!unavail.equals(available)) {%>--%>
-    <%--<td><input type="button" value="대여하기"></td>--%>
-    <%--<%} else {%>--%>
-    <%--<td>대여불가</td>--%>
-    <%--<%}%>--%>
-    <%--</tr>--%>
-    <%--<%}%>--%>
 </table>
 </body>
 </html>

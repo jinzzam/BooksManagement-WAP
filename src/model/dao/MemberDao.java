@@ -74,6 +74,23 @@ public class MemberDao {
         return memberDto;
     }
 
+    public boolean create(MemberDto memberDto){
+        String sql = "insert into member values(?, ?, ?, ?, ?)";
+        try {
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, memberDto.getName());
+            pstmt.setString(2, memberDto.getId());
+            pstmt.setString(3, memberDto.getPassword());
+            pstmt.setString(4, memberDto.getEmail());
+            pstmt.setString(5, memberDto.getPhone());
+            pstmt.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     public static MemberDao getInstance() {
         return instance;
     }

@@ -5,8 +5,8 @@ password varchar2(30) not null,
 email varchar2(80) not null,
 phone varchar2(11) not null);
 
-insert into member values('¹ÚÀ¯Áø', 'youjin', '123123', 'firstmind_@naver.com', '01057192212');
-insert into member values('ÀÌÁ¤¹Î', 'jungmin', '234234', 'min@naver.com', '01012341234');
+insert into member values('ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'youjin', '123123', 'firstmind_@naver.com', '01057192212');
+insert into member values('ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'jungmin', '234234', 'min@naver.com', '01012341234');
 select * from member;
 drop table member;
 commit;
@@ -20,14 +20,17 @@ name varchar2(100) not null,
 author varchar2(50) not null,
 translator varchar2(50),
 publisher varchar2(40) not null,
-checkoutdate varchar2(10),
+checkoutdate date,
 checkedout varchar2(20));
 
 select * from book;
 select name from book;
 select * from book where name='Head First Java';
-
+select * from book where no='B006.1';
+create sequence seq_list;
+drop table list;
 create table list(
+id number primary key not null,
 borrower varchar2(10) not null,
 name varchar2(100) not null,
 no varchar2(20) not null,
@@ -37,3 +40,8 @@ returndate varchar2(10),
 returntype varchar2(20));
 
 select * from list;
+insert into list values(seq_list.NEXTVAL,'¹ÚÀ¯Áø', 'µ¥ÀÌÅ¸º£ÀÌ½º·Ð', 'G002.2', 
+sysdate, 
+sysdate+14,
+null, null);
+delete from list where ID=1;

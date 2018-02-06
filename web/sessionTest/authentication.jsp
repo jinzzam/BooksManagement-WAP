@@ -12,6 +12,12 @@
 </head>
 <body>
 <%
+    request.setCharacterEncoding("utf-8");
+
+    //form 에서부터 id와 pw를 받아옴
+//    String id = request.getParameter("id");
+//    String password = request.getParameter("password");
+
     //0. 인증 가능 사용자 및 비밀번호 목록
     String[] users = {"youjin", "jungmin"};
     String[] password = {"123123", "234234"};

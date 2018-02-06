@@ -16,7 +16,7 @@
         <input name="id" type="text"><br>
 
         <label>PW :  </label>
-        <input name="pw" type="password"><br>
+        <input name="password" type="password"><br>
 
         <input type="submit" value="로그인">
     </form>

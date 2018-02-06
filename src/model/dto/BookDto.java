@@ -1,6 +1,6 @@
 package model.dto;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class BookDto {
     String bigField;

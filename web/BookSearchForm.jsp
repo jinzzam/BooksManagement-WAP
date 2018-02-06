@@ -62,7 +62,7 @@
                 <div class="jumbotron center-block" style="height: 200px; width: 1000px; padding: 70px 200px;">
                 <div id="custom-search-input">
                     <div class="input-group col-md-12">
-                        <input type="text" class="form-control input-lg" name="searchbook" placeholder="자료를 입력하세요" />
+                        <input type="text" class="form-control input-lg" name="search-book" placeholder="자료를 입력하세요" />
                         <span class="input-group-btn">
                         <button type="submit" class="btn btn-info btn-lg" type="button">검색</button>
                     </span>

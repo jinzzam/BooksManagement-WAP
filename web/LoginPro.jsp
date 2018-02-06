@@ -55,21 +55,23 @@
         pstmt.close();
         conn.close();
 
-        if (password.equals(pass)) {
+        if (password.equals(null)) {
+            request.setAttribute("errMsg","아이디가 존재하지 않습니다.");
+            RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
+            rd.forward(request,response);
+        } else if(password.equals(pass)) {
             out.println("<script>");
             out.println("alert('로그인 되었습니다. 환영합니다. :)')");
             out.println("</script>");
-        } else {
-            out.println("<script>");
-            out.println("alert('정보가 틀렸습니다!')");
-            out.println("</script>");
+            session.setAttribute("id", id);
+        } else{
+            request.setAttribute("errMsg","아이디 또는 비밀번호가 일치하지 않습니다.");
+            RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
+            rd.forward(request,response);
         }
     } catch (Exception e) {
         e.printStackTrace();
     }
-
-    session.setAttribute("id", id);
-    session.setAttribute("password", pass);
 
 %>
 <nav class = "navbar navbar-default">

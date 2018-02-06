@@ -76,7 +76,7 @@
         String vNo = rs.getString("no");
     %>
     <tr>
-        <form method="post" action="testList.jsp" accept-charset="UTF-8">
+        <form method="post" action="testList_jm.jsp" accept-charset="UTF-8">
         <td><%=rs.getString("no")%></td>
         <td><%=rs.getString("name")%></td>
         <td><%=rs.getString("author")%></td>

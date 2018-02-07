@@ -27,6 +27,11 @@ public class LoginController extends HttpServlet {
 
             if(memberService.isExistId(id)){
                 if(memberService.isMatchPassword(id,password)){
+                    out.println("<script language=\"javascript\">");
+                    out.println("alert('로그인 성공!');");
+                    out.println("</script>");
+                    out.close();
+
                     session.setAttribute("id",id);
                     response.sendRedirect("index");
                     return;

@@ -11,7 +11,7 @@ select * from member;
 drop table member;
 commit;
 
-
+drop table book;
 create table book(
 bigfield varchar2(40) not null,
 no varchar2(20) primary key,
@@ -24,8 +24,7 @@ checkoutdate date,
 checkedout varchar2(20));
 
 select * from book;
-select name from book;
-select * from book where name='Head First Java';
+select * from book where name like '%¿­Ç÷%';
 select * from book where no='B006.1';
 create sequence seq_list;
 drop table list;
@@ -45,3 +44,6 @@ sysdate,
 sysdate+14,
 null, null);
 delete from list where ID=1;
+
+SELECT * FROM user_tab_columns WHERE table_name='BOOK';
+SELECT * FROM col;

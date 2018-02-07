@@ -31,7 +31,6 @@ public class LoginController extends HttpServlet {
                     response.sendRedirect("index");
                     return;
                 }
-
             }
             response.sendRedirect("login");
             return;

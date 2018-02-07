@@ -54,8 +54,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a href="/logout" role="button" aria-haspopup="true" aria-expanded="false">로그아웃<span
-                        class="caret"></span></a>
+                <a href="/logout" role="button" aria-haspopup="true" aria-expanded="false">로그아웃<span class="caret"></span></a>
             </li>
         </ul>
     </div>

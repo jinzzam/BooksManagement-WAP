@@ -55,11 +55,18 @@
     </div>
 </nav>
 <%
-
     request.setCharacterEncoding("utf-8");
     BookDao bookDao = BookDao.getInstance();
-    System.out.println(request.getParameter("search-book"));
-    ArrayList<BookDto> bookDtoArr = bookDao.readName(request.getParameter("search-book"));
+    ArrayList<BookDto> bookDtoArr = (ArrayList<BookDto>) request.getAttribute("search-book");
+    for(BookDto b : bookDtoArr){
+        out.println(b.getNo());
+        out.println(b.getName());
+        out.println(b.getBigField());
+        out.println(b.getSmField());
+        out.println(b.getAuthor());
+        out.println(b.getAvailable());
+    }
+//    System.out.println(bookDtoArr);
     out.println(bookDtoArr);
 %>
 </table>

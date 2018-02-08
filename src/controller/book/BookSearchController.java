@@ -21,7 +21,7 @@ public class BookSearchController extends HttpServlet {
         if(bookService.isExistBook(name)){
             ArrayList<BookDto> result = bookService.getBook(name);
             System.out.println(result);
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("BookSearchPro.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("BookSearchResult.jsp");
             requestDispatcher.forward(request,response);
             return;
         }

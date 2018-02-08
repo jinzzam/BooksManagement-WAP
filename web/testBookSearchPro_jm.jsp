@@ -61,7 +61,7 @@
     Class.forName("oracle.jdbc.driver.OracleDriver");
     conn = DriverManager.getConnection(url, user, pass);
 
-    String name = request.getParameter("searchbook");
+    String name = request.getParameter("search-book");
     out.println(name);
 
     String sql = "select * from book where name like '%"+name+"%'";
@@ -73,17 +73,16 @@
     <%while(rs.next()){
         String available = rs.getString("available");
         String unavail = "1";
-        String vNo = rs.getString("no");
     %>
     <tr>
         <form method="post" action="testList_jm.jsp" accept-charset="UTF-8">
-        <td><%=rs.getString("no")%></td>
+        <td><input type = "hidden" name = "no"value=<%=rs.getString("no")%>/></td>
         <td><%=rs.getString("name")%></td>
         <td><%=rs.getString("author")%></td>
         <td><%=rs.getString("translator")%></td>
         <td><%=available%></td>
         <%if(!unavail.equals(available)) {%>
-        <td><button type="submit" class="btn btn-primary form-control" name = vNo>대여가능</button></td>
+        <td><input type="submit" value="대여가능"/></td>
         <%} else{%>
         <td>대여불가</td>
         <%}%>

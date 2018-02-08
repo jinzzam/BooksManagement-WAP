@@ -14,13 +14,13 @@
 
     <script type="text/javascript">
         function formCheck(obj) {
-            if(!obj.id.value || obj.id.value.trim().length == 0){
+            if (!obj.id.value || obj.id.value.trim().length == 0) {
                 alert("아이디를 입력해주세요.");
                 obj.id.value = "";
                 obj.id.focus();
                 return false;
             }
-            if(!obj.password.value || obj.password.value.trim().length == 0){
+            if (!obj.password.value || obj.password.value.trim().length == 0) {
                 alert("비밀번호를 입력해주세요.");
                 obj.password.value = "";
                 obj.password.focus();
@@ -28,8 +28,6 @@
             }
         }
     </script>
-
-
 
 
     <title>WAP LIBRARY</title>
@@ -54,7 +52,7 @@
     <div class="col-lg-4">
         <div class="jumbotron" style="padding-top: 20px;">
             <h3 style="text-align: center;">로그인 화면</h3>
-            <form method="post" action="LoginPro.jsp" onsubmit="return formCheck(this)">
+            <form method="post" action="/login" onsubmit="return formCheck(this)">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="아이디" name="id" maxlength="20">
                 </div>
@@ -66,9 +64,7 @@
                 <input type="submit" class="btn btn-primary form-control" value="로그인">
 
             </form>
-            <form method="post" action="JoinInForm.jsp">
-                <input type="submit" class="btn btn-primary form-control" value="회원가입">
-            </form>
+            <input type="button" class="btn btn-primary form-control" value="회원가입" onclick="location.href='join'">
         </div>
     </div>
 </div>

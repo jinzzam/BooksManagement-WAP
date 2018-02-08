@@ -21,7 +21,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/kfonts2.css" rel="stylesheet">
     <style>
-        body { padding-top: 20px; }
+        body {
+            padding-top: 20px;
+        }
     </style>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,13 +35,13 @@
 </head>
 <body>
 <h2>WAP 도서관 회원가입</h2>
-<form method="post" action="JoinInPro.jsp" accept-charset="UTF-8">
-<div class="container">
-    <div class="col-lg-4"></div>
-    <div class="col-lg-4">
-        <div class="jumbotron" style="padding-top: 20px;">
+<form method="post" action="/join" accept-charset="UTF-8">
+    <div class="container">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <div class="jumbotron" style="padding-top: 20px;">
                 <h3 style="text-align: center;">PLEASE JOIN US</h3>
-                    <br/>
+                <br/>
                 <div class="input-group">
                     <span class="input-group-addon"> <span class="glyphicon glyphicon-user"> </span> </span>
                     <input type="text" class="form-control" placeholder="이 름" name="name">
@@ -56,6 +58,11 @@
                 </div>
                 <br>
                 <div class="input-group">
+                    <span class="input-group-addon">  <span class="glyphicon glyphicon-lock"></span> </span>
+                    <input type="password" class="form-control" placeholder="암호확인" name="password-verify">
+                </div>
+                <br>
+                <div class="input-group">
                     <span class="input-group-addon"> <span class="glyphicon glyphicon-envelope"> </span> </span>
                     <input type="email" class="form-control" placeholder="이메일" name="email">
                 </div>
@@ -65,11 +72,12 @@
                     <input type="number" class="form-control" placeholder="핸드폰 번호" name="phone">
                 </div>
                 <br>
-            <button type="submit" class="btn btn-primary form-control">join</button>
+                <input type="submit" class="btn btn-primary form-control" value="join"></input>
+            </div>
         </div>
     </div>
-</div>
 </form>
+
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

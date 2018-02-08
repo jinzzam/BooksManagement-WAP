@@ -55,31 +55,20 @@
     </div>
 </nav>
 <%
-
     request.setCharacterEncoding("utf-8");
     BookDao bookDao = BookDao.getInstance();
-    System.out.println(request.getParameter("search-book"));
-    ArrayList<BookDto> bookDtoArr = bookDao.readName(request.getParameter("search-book"));
+    ArrayList<BookDto> bookDtoArr = (ArrayList<BookDto>) request.getAttribute("search-book");
+    for(BookDto b : bookDtoArr){
+        out.println(b.getNo());
+        out.println(b.getName());
+        out.println(b.getBigField());
+        out.println(b.getSmField());
+        out.println(b.getAuthor());
+        out.println(b.getAvailable());
+    }
+//    System.out.println(bookDtoArr);
     out.println(bookDtoArr);
-
-//    String sql = "select * from book where name like '%"+name+"%'";
 %>
-<%--<table border="1">--%>
-    <%--<%--%>
-        <%--while (rs.next()) {--%>
-            <%--String available = rs.getString("available");--%>
-            <%--String unavail = "1";--%>
-    <%--%>--%>
-
-    <%--<td><%=available%>--%>
-    <%--</td>--%>
-    <%--<%if (!unavail.equals(available)) {%>--%>
-    <%--<td><input type="button" value="대여하기"></td>--%>
-    <%--<%} else {%>--%>
-    <%--<td>대여불가</td>--%>
-    <%--<%}%>--%>
-    <%--</tr>--%>
-    <%--<%}%>--%>
 </table>
 </body>
 </html>

@@ -61,7 +61,7 @@
         <nav class="nav-sidebar">
             <ul class="nav">
                 <li class="active"><a href="BorrowingExtension.jsp">대출/연장 현황</a></li>
-                <li class=""><a href="BorrowingReturn.jsp">대출/반납 기록</a></li>
+                <li class=""><a href="/my-list">대출/반납 기록</a></li>
                 <li class=""><a href="Reservation.jsp">    예약</a></li>
             </ul>
         </nav>

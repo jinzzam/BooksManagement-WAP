@@ -37,14 +37,14 @@ public class ListDao {
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
             while (rs.next()) {
-                listDtoArr.add(new ListDto(rs.getString(1),
-                        rs.getString(2),
-                        rs.getString(3),
-                        rs.getDate(4),
-                        rs.getDate(5),
-                        rs.getDate(6),
-                        rs.getString(7)
-                ));
+                listDtoArr.add(new ListDto(rs.getInt("id"),
+                        rs.getString("borrower"),
+                        rs.getString("name"),
+                        rs.getString("no"),
+                        rs.getDate("outdate"),
+                        rs.getDate("duedate"),
+                        rs.getDate("returndate"),
+                        rs.getString("returntype")));
             }
             if (listDtoArr.size() == 0) {
                 return null;
@@ -57,24 +57,30 @@ public class ListDao {
         return null;
     }
 
-    public ListDto read(String borrower){
-        ListDto listDto = null;
+    public ArrayList<ListDto> readByBorrower(String borrower) {
+        ArrayList<ListDto> ListDtoArr = new ArrayList<>();
         String sql = "select * from list where borrower = ?";
-        try{
+        try {
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, borrower);
             rs = pstmt.executeQuery();
-            while(rs.next()){
-                listDto = new ListDto(rs.getString(1),
-                        rs.getString(2),
-                        rs.getString(3));
+            while (rs.next()) {
+                ListDtoArr.add(new ListDto(rs.getInt("id"),
+                        rs.getString("borrower"),
+                        rs.getString("name"),
+                        rs.getString("no"),
+                        rs.getDate("outdate"),
+                        rs.getDate("duedate"),
+                        rs.getDate("returndate"),
+                        rs.getString("returntype")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return listDto;
+        return ListDtoArr;
     }
-    public static ListDao getInstance(){
+
+    public static ListDao getInstance() {
         return instance;
     }
 }

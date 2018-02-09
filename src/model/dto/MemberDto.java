@@ -1,11 +1,11 @@
 package model.dto;
 
 public class MemberDto {
-    String name ;
-    String id;
-    String password;
-    String email;
-    String phone;
+    private String name;
+    private String id;
+    private String password;
+    private String email;
+    private String phone;
 
     public MemberDto(String name, String id, String password, String email, String phone) {
         this.name = name;

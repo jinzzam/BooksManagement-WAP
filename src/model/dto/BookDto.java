@@ -3,15 +3,15 @@ package model.dto;
 import java.util.Date;
 
 public class BookDto {
-    String bigField;
-    String no;
-    String smField;
-    String name;
-    String author;
-    String translator;
-    String publisher;
-    Date checkOutDate;
-    String available;
+    private String bigField;
+    private String no;
+    private String smField;
+    private String name;
+    private String author;
+    private String translator;
+    private String publisher;
+    private Date checkOutDate;
+    private String available;
 
     public BookDto(String bigField, String no, String smField, String name, String author, String translator, String publisher) {
         this.bigField = bigField;

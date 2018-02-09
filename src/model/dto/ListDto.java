@@ -3,13 +3,14 @@ package model.dto;
 import java.util.Date;
 
 public class ListDto {
-    String borrower;
-    String name;
-    String no;
-    Date outDate;
-    Date dueDate;
-    Date returnDate;
-    String returnType;
+    private int id;
+    private String borrower;
+    private String name;
+    private String no;
+    private Date outDate;
+    private Date dueDate;
+    private Date returnDate;
+    private String returnType;
 
     public ListDto(String borrower, String name, String no) {
         this.borrower = borrower;
@@ -17,7 +18,7 @@ public class ListDto {
         this.no = no;
     }
 
-    public ListDto(String borrower, String name, String no, Date outDate, Date dueDate, Date returnDate, String returnType) {
+    public ListDto(int id, String borrower, String name, String no, Date outDate, Date dueDate, Date returnDate, String returnType) {
         this.borrower = borrower;
         this.name = name;
         this.no = no;

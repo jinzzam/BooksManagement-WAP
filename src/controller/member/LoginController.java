@@ -18,6 +18,7 @@ import java.io.PrintWriter;
 @WebServlet("/login")
 public class LoginController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
         HttpSession session = request.getSession();
         String id = request.getParameter("id");
         String password = request.getParameter("password");
@@ -28,10 +29,8 @@ public class LoginController extends HttpServlet {
             if(memberService.isExistId(id)){
                 if(memberService.isMatchPassword(id,password)){
                     out.println("<script language=\"javascript\">");
-                    out.println("alert('로그인 성공!');");
+                    out.println("alert('success!');");
                     out.println("</script>");
-                    out.close();
-
                     session.setAttribute("id",id);
                     response.sendRedirect("index");
                     return;

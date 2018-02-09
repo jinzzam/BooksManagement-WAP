@@ -10,46 +10,11 @@
 </head>
 <body>
 <%
-    request.setCharacterEncoding("utf-8"); // 한글깨짐현상 바로잡음
-    String url = "jdbc:oracle:thin:@localhost:1521:xe";
-    String user = "system";
-    String pass = "pass";
-    Connection conn;
-    Statement stmt;
-    String lBorrower,lName,lNo,lOutdate,lDuedate,lReturndate,lReturntype;
-
-    conn = DriverManager.getConnection(url, user, pass);
-    stmt = conn.createStatement();
-    Class.forName("oracle.jdbc.driver.OracleDriver");
-    int su = 0;
     request.setCharacterEncoding("UTF-8");
-    vName = request.getParameter("name");
-    vId = request.getParameter("id");
-    vPwd = request.getParameter("password");
-    vEmail = request.getParameter("email");
-    vPhone = request.getParameter("phone");
+    String num = request.getParameter("no");
 
-
-    String sql = "insert into member values('"+vName+"','"+vId+"','"+vPwd+"','"+vEmail+"','"+vPhone+"')";
-    su = stmt.executeUpdate(sql);
-
-    if(su!=0){
+    out.println(num);
 %>
-<script>
-    alert('<%=vId%>'+'님 회원가입 성공!!');
-</script>
-<%
-} else{
-%>
-<script>
-    alert('회원가입 실패');
-</script>
-<%
-    }
-    stmt.close();
-    conn.close();
-%>
-<script>location.href = "Login.jsp";</script>
 
 
 </body>

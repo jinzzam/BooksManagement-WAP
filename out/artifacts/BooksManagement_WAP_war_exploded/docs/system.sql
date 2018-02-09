@@ -21,7 +21,12 @@ checkoutdate date,
 checkedout varchar2(20));
 
 select * from book;
+<<<<<<< HEAD
+select name from book;
+select * from book where name='Head First Java';
+=======
 select * from book where name like '%열혈%';
+>>>>>>> 23e7d4d6213d08b5d2ade523bef2651d2e406d9c
 select * from book where no='B006.1';
 create sequence seq_list;
 
@@ -43,6 +48,7 @@ insert into list values(seq_list.NEXTVAL,'박유진', '데이타베이스론', 'G002.2',
 sysdate, 
 sysdate+14,
 null, null);
+<<<<<<< HEAD
 
 insert into list values(
 seq_list.NEXTVAL,
@@ -85,3 +91,13 @@ null, null
 );
 
 delete from list where ID=1;
+=======
+<<<<<<< HEAD
+delete from list where ID=1;
+=======
+delete from list where ID=1;
+
+SELECT * FROM user_tab_columns WHERE table_name='BOOK';
+SELECT * FROM col;
+>>>>>>> 23e7d4d6213d08b5d2ade523bef2651d2e406d9c
+>>>>>>> 6417a770f4fc6258b544a84b7605ce2374998172

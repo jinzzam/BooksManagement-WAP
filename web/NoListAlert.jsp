@@ -12,7 +12,7 @@
 </head>
 <body>
 <script>
-    alert('none');
+    alert('대출/반납 기록이 없습니다.');
     history.back();
 </script>
 </body>

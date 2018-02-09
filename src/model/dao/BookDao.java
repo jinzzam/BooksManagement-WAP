@@ -30,67 +30,13 @@ public class BookDao {
         }
     }
 
-    public ArrayList<BookDto> readAll(){
+    public ArrayList<BookDto> readAll() {
         ArrayList<BookDto> bookDtoArr = new ArrayList<>();
         String sql = "select * from book";
-        try{
+        try {
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
-            while(rs.next()){
-                bookDtoArr.add(new BookDto(rs.getString(1),
-                        rs.getString(2),
-                        rs.getString(3),
-                        rs.getString(4),
-                        rs.getString(5),
-                        rs.getString(6),
-                        rs.getString(7),
-                        rs.getDate(8),
-                        rs.getString(9)
-                        ));
-            }
-            if(bookDtoArr.size()==0){
-                return null;
-            }else{
-                return  bookDtoArr;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    public BookDto read(String name){
-        BookDto bookDto = null;
-        String sql = "select * from book where name like ?";
-        try{
-         pstmt = conn.prepareStatement(sql);
-         pstmt.setString(1, "%"+name+"%");
-         rs = pstmt.executeQuery();
-         while(rs.next()){
-             bookDto = new BookDto(rs.getString(1),
-                     rs.getString(2),
-                     rs.getString(3),
-                     rs.getString(4),
-                     rs.getString(5),
-                     rs.getString(6),
-                     rs.getString(7)
-                     );
-         }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return bookDto;
-    }
-
-    public ArrayList<BookDto> readName(String name){
-        ArrayList<BookDto> bookDtoArr = new ArrayList<>();
-        String sql = "select * from book where name like ?";
-        try{
-            pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, "%"+name+"%");
-            rs = pstmt.executeQuery();
-
-            while(rs.next()){
+            while (rs.next()) {
                 bookDtoArr.add(new BookDto(rs.getString(1),
                         rs.getString(2),
                         rs.getString(3),
@@ -102,10 +48,64 @@ public class BookDao {
                         rs.getString(9)
                 ));
             }
-            if(bookDtoArr.size()==0){
+            if (bookDtoArr.size() == 0) {
                 return null;
-            }else{
-                return  bookDtoArr;
+            } else {
+                return bookDtoArr;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public BookDto read(String name) {
+        BookDto bookDto = null;
+        String sql = "select * from book where name like ?";
+        try {
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, "%" + name + "%");
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                bookDto = new BookDto(rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7)
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return bookDto;
+    }
+
+    public ArrayList<BookDto> readName(String name) {
+        ArrayList<BookDto> bookDtoArr = new ArrayList<>();
+        String sql = "select * from book where name like ?";
+        try {
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, "%" + name + "%");
+            rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                bookDtoArr.add(new BookDto(rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getDate(8),
+                        rs.getString(9)
+                ));
+            }
+            if (bookDtoArr.size() == 0) {
+                return null;
+            } else {
+                return bookDtoArr;
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -113,7 +113,7 @@ public class BookDao {
         return null;
     }
 
-    public static BookDao getInstance(){
+    public static BookDao getInstance() {
         return instance;
     }
 }

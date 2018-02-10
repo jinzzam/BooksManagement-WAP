@@ -42,10 +42,9 @@ public class MemberDao {
                         rs.getString(4),
                         rs.getString(5)));
             }
-            if(memberDtoArr.size()==0){
+            if (memberDtoArr.size() == 0) {
                 return null;
-            }
-            else{
+            } else {
                 return memberDtoArr;
             }
         } catch (SQLException e) {
@@ -54,12 +53,12 @@ public class MemberDao {
         return null;
     }
 
-    public MemberDto read(String id){
+    public MemberDto read(String id) {
         MemberDto memberDto = null;
         String sql = "select * from member where id = ?";
         try {
             pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1,id);
+            pstmt.setString(1, id);
             rs = pstmt.executeQuery();
             while (rs.next()) {
                 memberDto = new MemberDto(rs.getString(1),
@@ -74,7 +73,7 @@ public class MemberDao {
         return memberDto;
     }
 
-    public boolean create(MemberDto memberDto){
+    public boolean create(MemberDto memberDto) {
         String sql = "insert into member values(?, ?, ?, ?, ?)";
         try {
             pstmt = conn.prepareStatement(sql);
@@ -84,6 +83,22 @@ public class MemberDao {
             pstmt.setString(4, memberDto.getEmail());
             pstmt.setString(5, memberDto.getPhone());
             pstmt.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean update(MemberDto memberDto, String id) {
+        String sql = "update member set password=?, email=?, phone=? where id=?";
+        try {
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, memberDto.getPassword());
+            pstmt.setString(2, memberDto.getEmail());
+            pstmt.setString(3, memberDto.getPhone());
+            pstmt.setString(4, memberDto.getId());
+            pstmt.executeQuery();
             return true;
         } catch (SQLException e) {
             e.printStackTrace();

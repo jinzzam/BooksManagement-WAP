@@ -48,12 +48,11 @@ public class ModifyInfoController extends HttpServlet {
             }else{
                 M.setPhone(memberService.getMember(id).getPhone());
             }
-            ch = memberService.update(M, id);
+            memberService.update(M, id);
         } catch (Exception e) {
             e.printStackTrace();
         }
         request.setAttribute("ch", ch);
-        System.out.println(ch);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("ChangeResult.jsp");
         requestDispatcher.forward(request, response);
     }

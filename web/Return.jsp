@@ -21,7 +21,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="Main.jsp">WAP 도서관</a>
+        <a class="navbar-brand" href="/index">WAP 도서관</a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -44,7 +44,7 @@
     </div>
 </nav>
 <%
-    java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat("yyMMdd");
+    java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat("yyyyMMdd");
     String today = formatter.format(new java.util.Date());
     System.out.println(today);
 

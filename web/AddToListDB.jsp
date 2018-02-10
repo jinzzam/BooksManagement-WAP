@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="Main.jsp">WAP 도서관</a>
+        <a class="navbar-brand" href="/index">WAP 도서관</a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -65,10 +65,6 @@
     laterDate = cal.getTime();
     laterDay = format.format(laterDate);
 
-    System.out.println(laterDay);
-
-
-
     request.setCharacterEncoding("utf-8"); // 한글깨짐현상 바로잡음
     String booknum = request.getParameter("no");
     String id = (String)session.getAttribute("id");
@@ -79,7 +75,6 @@
     Connection conn;
     ResultSet rs = null;
     PreparedStatement pstmt;
-
 
     Class.forName("oracle.jdbc.driver.OracleDriver");
     conn = DriverManager.getConnection(url, user, pass);

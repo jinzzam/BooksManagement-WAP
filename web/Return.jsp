@@ -44,48 +44,63 @@
     </div>
 </nav>
 <%
+    java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat("yyMMdd");
+    String today = formatter.format(new java.util.Date());
+    System.out.println(today);
+
     request.setCharacterEncoding("utf-8"); // 한글깨짐현상 바로잡음
+    String booknum = request.getParameter("no");
+    String id = (String)session.getAttribute("id");
+    String inTimeReturn = "정상반납";
+    String lateReturn = "연체반납";
+    String avail = "0";
     String url = "jdbc:oracle:thin:@localhost:1521:xe";
     String user = "system";
     String pass = "pass";
     Connection conn;
+    ResultSet rs = null;
     PreparedStatement pstmt;
-    ResultSet rs;
+
 
     Class.forName("oracle.jdbc.driver.OracleDriver");
     conn = DriverManager.getConnection(url, user, pass);
 
-    String name = request.getParameter("search-book");
-    out.println(name);
-
-    String sql = "select * from book where name like '%"+name+"%'";
+    String sql = "update book set available = ? where no = ?";
     pstmt=conn.prepareStatement(sql);
+    pstmt.setString(1,avail);
+    pstmt.setString(2,booknum);
+    pstmt.executeUpdate();
 
-    rs=pstmt.executeQuery();
+    sql = "select * from list where no = ? and returntype = ?";
+    pstmt = conn.prepareStatement(sql);
+    pstmt.setString(1,booknum);
+    pstmt.setString(2,"null");
+    rs = pstmt.executeQuery();
+    rs.next();
+    String duedate = rs.getString("duedate");
+
+    int int_duedate = Integer.parseInt(duedate);
+    int int_today = Integer.parseInt(today);
+
+    String returntype;
+    if(int_today>int_duedate){
+        returntype = lateReturn;
+    }
+    else
+        returntype = inTimeReturn;
+
+
+
+sql = "update list set returndate = ?, returntype = ? where no = ? and returntype =?";
+    pstmt=conn.prepareStatement(sql);
+    pstmt.setString(1,today);
+    pstmt.setString(2,returntype);
+    pstmt.setString(3,booknum);
+    pstmt.setString(4,"null");
+    pstmt.executeUpdate();
+
 %>
-<table border="1">
-    <%while(rs.next()){
-        String available = rs.getString("available");
-        String unavail = "1";
-    %>
-    <tr>
-        <form method="post" action="AddToListDB.jsp" accept-charset="UTF-8">
-            <td><input type = "hidden" name = "no"value=<%=rs.getString("no")%>></td>
-            <td><%=rs.getString("no")%></td>
-            <td><%=rs.getString("name")%></td>
-            <td><%=rs.getString("author")%></td>
-            <td><%=rs.getString("translator")%></td>
-            <%if(!unavail.equals(available)) {%>
-            <td><input type="submit" value="대여하기"></td>
-            <%} else{%>
-            <td>대여불가</td>
-            <%}%>
-        </form>
-    </tr>
-    <%}%>
-</table>
 <%
-    rs.close();
     pstmt.close();
     conn.close();
 %>

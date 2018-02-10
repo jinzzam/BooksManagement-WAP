@@ -48,21 +48,25 @@
         </ul>
     </div>
 </nav>
-<div id = "secondary">
-<div class="container">
-    <h3>대출/연장/예약</h3>
-    <div class="row">
-     <div class="col-xs-2">
-        <nav class="nav-sidebar">
-            <ul class="nav">
-                <li class="active"><a href="/now-my-books">대출/연장 현황</a></li>
-                <li class=""><a href="/my-list">대출/반납 기록</a></li>
-                <li class=""><a href="Reservation.jsp">    예약</a></li>
-            </ul>
-        </nav>
-     </div>
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-2">
+            <div class="container">
+                <h3>대출/연장/예약</h3>
+                <div class="row">
+                    <div class="col-md-2">
+                        <nav class="nav-sidebar">
+                            <ul class="nav">
+                                <li class="active"><a href="BorrowingExtension.jsp">대출/연장 현황</a></li>
+                                <li class=""><a href="/my-list">대출/반납 기록</a></li>
+                                <li class=""><a href="Reservation.jsp">    예약</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 </div>
 <script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src = "js/bootstrap.min.js"></script>

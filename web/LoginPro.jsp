@@ -96,7 +96,7 @@
                     <li><a href="BorrowingExtensionReservation.jsp">대출/연장/예약</a> </li>
                 </ul>
             </li>
-            <li><a href="bbs.jsp">도서관 이용안내</a></li>
+            <li><a href="AboutWapLib.jsp">도서관 이용안내</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">

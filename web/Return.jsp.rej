@@ -1,0 +1,9 @@
+diff a/web/Return.jsp b/web/Return.jsp	(rejected hunks)
+@@ -104,6 +104,7 @@
+     pstmt.close();
+     conn.close();
+ %>
++<jsp:forward page="BorrowingExtension.jsp"/>
+ <script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
+ <script src = "js/bootstrap.min.js"></script>
+ </body>

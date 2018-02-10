@@ -43,20 +43,14 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle"
-                   data-toggle="dropdown" role="button" aria-haspopup="true"
-                   aria-expanded="false">접속하기<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li class="active"><a href="Login.jsp">로그인</a></li>
-                    <li><a href="JoinInForm.jsp">회원가입</a> </li>
-                </ul>
+                <a href="/logout" role="button" aria-haspopup="true" aria-expanded="false">로그아웃<span class="caret"></span></a>
             </li>
         </ul>
     </div>
 </nav>
 <h2>WAP 도서관 검색</h2>
 <br/>
-<form method="post" action="/book-search" accept-charset="UTF-8">
+<form method="post" action="BookSearchPro.jsp" accept-charset="UTF-8">
     <div class="container ">
         <div class="row">
                 <div class="jumbotron center-block" style="height: 200px; width: 1000px; padding: 70px 200px;">

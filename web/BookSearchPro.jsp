@@ -76,7 +76,7 @@
         <td><%=rs.getString("translator")%></td>
         <td><%=available%></td>
         <%if(!unavail.equals(available)) {%>
-        <td><input type="submit" value="대여가능"/></td>
+        <td><input type="submit" value="대여하기"/></td>
         <%} else{%>
         <td>대여불가</td>
         <%}%>

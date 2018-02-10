@@ -17,17 +17,17 @@
 %>
 <script>
     alert('변경되었습니다.');
+    location.href="/index";
 </script>
 <%
 } else {
 %>
 <script>
     alert('변경사항이 없습니다.');
+    location.href="/index";
 </script>
-
 <%
     }
-    response.sendRedirect("/index");
 %>
 
 </body>

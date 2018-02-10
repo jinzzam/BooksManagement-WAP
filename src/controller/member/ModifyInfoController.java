@@ -1,6 +1,7 @@
 package controller.member;
 
 import model.Service.MemberService;
+import model.dto.MemberDto;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -34,19 +35,19 @@ public class ModifyInfoController extends HttpServlet {
                 newPhone = (String) request.getParameter("newPhone");
             }
 
-            memberService.getMember(id).setPassword(newPassword);
-            memberService.getMember(id).setEmail(newEmail);
-            memberService.getMember(id).setPhone(newPhone);
+            MemberDto M = memberService.getMember(id);
 
-            ch = memberService.update(memberService.getMember(id), id);
+            M.setPassword(newPassword);
+            M.setEmail(newEmail);
+            M.setPhone(newPhone);
+
+            ch = memberService.update(M, id);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         request.setAttribute("ch", ch);
         System.out.println(ch);
-        System.out.println(memberService.getMember(id).getPassword());
-        System.out.println(request.getParameter("newPassword"));
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("ChangeResult.jsp");
         requestDispatcher.forward(request, response);
     }

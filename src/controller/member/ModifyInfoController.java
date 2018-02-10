@@ -24,14 +24,14 @@ public class ModifyInfoController extends HttpServlet {
         String newPhone = memberService.getMember(id).getPhone();
         boolean ch = false;
         try {
-            if (request.getAttribute("newPassword") != null) {
-                newPassword = (String) request.getAttribute("newPassword");
+            if (request.getParameter("newPassword") != null) {
+                newPassword = (String) request.getParameter("newPassword");
             }
-            if (request.getAttribute("newEmail") != null) {
-                newEmail = (String) request.getAttribute("newEmail");
+            if (request.getParameter("newEmail") != null) {
+                newEmail = (String) request.getParameter("newEmail");
             }
-            if (request.getAttribute("newPhone") != null) {
-                newPhone = (String) request.getAttribute("newPhone");
+            if (request.getParameter("newPhone") != null) {
+                newPhone = (String) request.getParameter("newPhone");
             }
 
             memberService.getMember(id).setPassword(newPassword);
@@ -45,6 +45,8 @@ public class ModifyInfoController extends HttpServlet {
 
         request.setAttribute("ch", ch);
         System.out.println(ch);
+        System.out.println(memberService.getMember(id).getPassword());
+        System.out.println(request.getParameter("newPassword"));
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("ChangeResult.jsp");
         requestDispatcher.forward(request, response);
     }

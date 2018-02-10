@@ -19,7 +19,6 @@
     alert('변경되었습니다.');
 </script>
 <%
-    response.sendRedirect("/index");
 } else {
 %>
 <script>
@@ -27,8 +26,8 @@
 </script>
 
 <%
-        response.sendRedirect("/index");
     }
+    response.sendRedirect("/index");
 %>
 
 </body>

@@ -20,34 +20,39 @@ public class ModifyInfoController extends HttpServlet {
         HttpSession session = request.getSession();
         MemberService memberService = MemberService.getInstance();
         String id = (String) session.getAttribute("id");
-        String newPassword = memberService.getMember(id).getPassword();
-        String newEmail = memberService.getMember(id).getEmail();
-        String newPhone = memberService.getMember(id).getPhone();
+        MemberDto M = memberService.getMember(id);
+        String newPassword;
+        String newEmail;
+        String newPhone;
+
         boolean ch = false;
         try {
-            if (request.getParameter("newPassword") != null) {
+            if (!request.getParameter("newPassword").isEmpty()) {
                 newPassword = (String) request.getParameter("newPassword");
+                M.setPassword(newPassword);
+                ch = true;
+            } else{
+                M.setPassword(memberService.getMember(id).getPassword());
             }
-            if (request.getParameter("newEmail") != null) {
+            if (!request.getParameter("newEmail").isEmpty()) {
                 newEmail = (String) request.getParameter("newEmail");
+                M.setEmail(newEmail);
+                ch = true;
+            }else{
+                M.setEmail(memberService.getMember(id).getEmail());
             }
-            if (request.getParameter("newPhone") != null) {
+            if (!request.getParameter("newPhone").isEmpty()) {
                 newPhone = (String) request.getParameter("newPhone");
+                M.setPhone(newPhone);
+                ch = true;
+            }else{
+                M.setPhone(memberService.getMember(id).getPhone());
             }
-
-            MemberDto M = memberService.getMember(id);
-
-            M.setPassword(newPassword);
-            M.setEmail(newEmail);
-            M.setPhone(newPhone);
-
-            ch = memberService.update(M, id);
+            memberService.update(M, id);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         request.setAttribute("ch", ch);
-        System.out.println(ch);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("ChangeResult.jsp");
         requestDispatcher.forward(request, response);
     }

@@ -17,9 +17,9 @@
 %>
 <script>
     alert('변경되었습니다.');
-    history.back();
 </script>
 <%
+    response.sendRedirect("/index");
 } else {
 %>
 <script>

@@ -24,22 +24,22 @@ public class ModifyInfoController extends HttpServlet {
         String newPhone = memberService.getMember(id).getPhone();
         boolean ch = false;
         try {
-            if(request.getAttribute("newPassword")!=null) {
+            if (request.getAttribute("newPassword") != null) {
                 newPassword = (String) request.getAttribute("newPassword");
             }
-            if(request.getAttribute("newEmail")!=null) {
+            if (request.getAttribute("newEmail") != null) {
                 newEmail = (String) request.getAttribute("newEmail");
             }
-            if(request.getAttribute("newPhone")!=null) {
+            if (request.getAttribute("newPhone") != null) {
                 newPhone = (String) request.getAttribute("newPhone");
             }
 
             memberService.getMember(id).setPassword(newPassword);
             memberService.getMember(id).setEmail(newEmail);
-            memberService.getMember(id).setEmail(newPhone);
+            memberService.getMember(id).setPhone(newPhone);
 
             ch = memberService.update(memberService.getMember(id), id);
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -47,7 +47,6 @@ public class ModifyInfoController extends HttpServlet {
         System.out.println(ch);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("ChangeResult.jsp");
         requestDispatcher.forward(request, response);
-
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

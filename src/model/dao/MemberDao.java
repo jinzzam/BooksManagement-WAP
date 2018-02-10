@@ -96,7 +96,7 @@ public class MemberDao {
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, memberDto.getPassword());
             pstmt.setString(2, memberDto.getEmail());
-            pstmt.setString(3, memberDto.getEmail());
+            pstmt.setString(3, memberDto.getPhone());
             pstmt.setString(4, memberDto.getId());
             pstmt.executeQuery();
             return true;

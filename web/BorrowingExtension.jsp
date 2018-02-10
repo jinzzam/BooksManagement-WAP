@@ -43,6 +43,20 @@
         </ul>
     </div>
 </nav>
+<div class="container">
+    <h3>대출/연장/예약</h3>
+    <div class="row">
+        <div class="col-xs-2">
+            <nav class="nav-sidebar">
+                <ul class="nav">
+                    <li class="active"><a href="BorrowingExtension.jsp">대출/연장 현황</a></li>
+                    <li class=""><a href="/my-list">대출/반납 기록</a></li>
+                    <li class=""><a href="Reservation.jsp">    예약</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
 <%
     request.setCharacterEncoding("utf-8"); // 한글깨짐현상 바로잡음
     String url = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -55,34 +69,30 @@
     Class.forName("oracle.jdbc.driver.OracleDriver");
     conn = DriverManager.getConnection(url, user, pass);
 
-    String name = request.getParameter("search-book");
-    out.println(name);
-
-    String sql = "select * from book where name like '%"+name+"%'";
+    String id = (String)session.getAttribute("id");
+    System.out.println(id);
+    String sql = "select * from list where id like '%"+id+"%'";
     pstmt=conn.prepareStatement(sql);
-
     rs=pstmt.executeQuery();
 %>
 <table border="1">
     <%while(rs.next()){
-        String available = rs.getString("available");
-        String unavail = "1";
+        String returndate = rs.getString("returndate");
+        String notReturn = "null";
+        if(returndate.equals(notReturn)){
     %>
     <tr>
-        <form method="post" action="AddToListDB.jsp" accept-charset="UTF-8">
+        <form method="post" action="Return.jsp" accept-charset="UTF-8">
             <td><input type = "hidden" name = "no"value=<%=rs.getString("no")%>></td>
+            <td><%=rs.getString("no")%></td>
             <td><%=rs.getString("name")%></td>
-            <td><%=rs.getString("author")%></td>
-            <td><%=rs.getString("translator")%></td>
-            <td><%=available%></td>
-            <%if(!unavail.equals(available)) {%>
-            <td><input type="submit" value="대여가능"/></td>
-            <%} else{%>
-            <td>대여불가</td>
-            <%}%>
+            <td><%=rs.getString("outdate")%></td>
+            <td><%=rs.getString("duedate")%></td>
+            <td><input type="submit" value="반납"/></td>
         </form>
     </tr>
-    <%}%>
+    <%}
+    }%>
 </table>
 <%
     rs.close();

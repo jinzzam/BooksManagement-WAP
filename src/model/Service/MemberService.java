@@ -48,6 +48,10 @@ public class MemberService {
         return memberDao.readAll();
     }
 
+    public MemberDto getMember(String id) {
+        return memberDao.read(id);
+    }
+
     public static MemberService getInstance() {
         return instance;
     }

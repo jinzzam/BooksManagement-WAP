@@ -7,6 +7,9 @@ phone varchar2(11) not null);
 
 select * from member;
 commit;
+update member set Password='123',EMAIL='aaa@naver.com', PHONE='013401010' where id='youjin';
+alter table member add(available varchar2(2));
+ALTER TABLE member MODIFY(phone varchar(11));
 
 drop table book;
 create table book(
@@ -24,7 +27,9 @@ select * from book;
 select * from book where name like '%¿­Ç÷%';
 select * from book where no='B006.1';
 create sequence seq_list;
+update book set checkedout='¹ÚÀ¯Áø' where no='A014';
 
+alter table book add(available varchar2(2));
 
 create table list(
 id number primary key not null,

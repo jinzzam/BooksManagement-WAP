@@ -38,13 +38,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle"
-                   data-toggle="dropdown" role="button" aria-haspopup="true"
-                   aria-expanded="false">접속하기<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li class="active"><a href="Login.jsp">로그인</a></li>
-                    <li><a href="JoinInForm.jsp">회원가입</a> </li>
-                </ul>
+                <a href="/logout" role="button" aria-haspopup="true" aria-expanded="false">로그아웃<span class="caret"></span></a>
             </li>
         </ul>
     </div>
@@ -75,8 +69,8 @@
         String unavail = "1";
     %>
     <tr>
-        <form method="post" action="testList_jm.jsp" accept-charset="UTF-8">
-        <td><input type = "hidden" name = "no"value=<%=rs.getString("no")%>/></td>
+        <form method="post" action="AddToListDB.jsp" accept-charset="UTF-8">
+        <td><input type = "hidden" name = "no"value=<%=rs.getString("no")%>></td>
         <td><%=rs.getString("name")%></td>
         <td><%=rs.getString("author")%></td>
         <td><%=rs.getString("translator")%></td>

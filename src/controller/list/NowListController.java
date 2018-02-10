@@ -27,19 +27,13 @@ public class NowListController extends HttpServlet {
         if (session.getAttribute("id") != null) {
             MemberService memberService = MemberService.getInstance();
             String name = memberService.getName((String) session.getAttribute("id"));
-            System.out.println("세션에서 아이디로 이름 얻었나 ? = "+ name);
-            System.out.println(bookDao.readByCheckedOut(name).size());
             if (bookDao.readByCheckedOut(name).size() != 0) {
-                System.out.println("if case 안");
                 request.setAttribute("name", name);
                 ArrayList<BookDto> bookDtoArr = bookDao.readByCheckedOut(name);
-                System.out.println(bookDtoArr);
                 request.setAttribute("NowMyBooks", bookDtoArr);
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("NowMyBooksView.jsp");
                 requestDispatcher.forward(request, response);
             } else {
-                System.out.println("else case 안");
-                /*현재 빌리고 있는 책이 없습니다.*/
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("NoListAlert.jsp");
                 requestDispatcher.forward(request, response);
             }

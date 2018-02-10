@@ -15,7 +15,7 @@ public class BookService {
 
     public boolean isExistBook(String name) {
         ArrayList<BookDto> bookDtoArr = new ArrayList<>();
-        bookDtoArr = bookDao.readName(name);
+        bookDtoArr = bookDao.readByName(name);
         if (bookDtoArr != null) {
             return true;
         }
@@ -23,7 +23,7 @@ public class BookService {
     }
 
     public ArrayList<BookDto> getBook(String name){
-        return bookDao.readName(name);
+        return bookDao.readByName(name);
     }
 
     public static BookService getInstance(){

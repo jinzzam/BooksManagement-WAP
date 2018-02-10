@@ -91,7 +91,7 @@
 
 
 
-sql = "update list set returndate = ?, returntype = ? where no = ? and returntype =?";
+    sql = "update list set returndate = ?, returntype = ? where no = ? and returntype =?";
     pstmt=conn.prepareStatement(sql);
     pstmt.setString(1,today);
     pstmt.setString(2,returntype);

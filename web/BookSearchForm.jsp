@@ -53,7 +53,7 @@
 <form method="post" action="BookSearchPro.jsp" accept-charset="UTF-8">
     <div class="container ">
         <div class="row">
-                <div class="jumbotron center-block" style="height: 200px; width: 1000px; padding: 70px 200px;">
+            <div class="jumbotron center-block" style="height: 200px; width: 1000px; padding: 70px 200px;">
                 <div id="custom-search-input">
                     <div class="input-group col-md-12">
                         <input type="text" class="form-control input-lg" name="search-book" placeholder="자료를 입력하세요" />
@@ -62,7 +62,7 @@
                     </span>
                     </div>
                 </div>
-                </div>
+            </div>
         </div>
     </div>
 </form>

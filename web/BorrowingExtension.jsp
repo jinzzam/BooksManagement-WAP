@@ -45,80 +45,81 @@
 </nav>
 
 <div class = "container">
-        <div class = "row">
+    <div class = "row">
 
-            <div class = "col-md-2">
-<div class="container">
-    <h3>대출/연장/예약</h3>
-    <div class="row">
-        <div class="col-md-2">
-            <nav class="nav-sidebar">
-                <ul class="nav">
-                    <li class="active"><a href="BorrowingExtension.jsp">대출/연장 현황</a></li>
-                    <li class=""><a href="/my-list">대출/반납 기록</a></li>
-                    <li class=""><a href="Reservation.jsp">    예약</a></li>
-                </ul>
-            </nav>
+        <div class = "col-md-2">
+            <div class="container">
+                <h3>대출/연장/예약</h3>
+                <div class="row">
+                    <div class="col-md-2">
+                        <nav class="nav-sidebar">
+                            <ul class="nav">
+                                <li class="active"><a href="BorrowingExtension.jsp">대출/연장 현황</a></li>
+                                <li class=""><a href="/my-list">대출/반납 기록</a></li>
+                                <li class=""><a href="Reservation.jsp">    예약</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%
+            request.setCharacterEncoding("utf-8"); // 한글깨짐현상 바로잡음
+            String url = "jdbc:oracle:thin:@localhost:1521:xe";
+            String user = "system";
+            String pass = "pass";
+            Connection conn;
+            PreparedStatement pstmt;
+            ResultSet rs;
+
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            conn = DriverManager.getConnection(url, user, pass);
+
+            String id = (String)session.getAttribute("id");
+            System.out.println(id);
+            String sql = "select * from list where id like '%"+id+"%'";
+            pstmt=conn.prepareStatement(sql);
+            rs=pstmt.executeQuery();
+        %>
+        <div class = "col-md-6">
+            <div class="container">
+                <table border="1">
+                    <tr>
+                        <td><input type = "hidden" name = "nothing"></td>
+                        <th>도서번호</th>
+                        <th>책제목</th>
+                        <th>대여일</th>
+                        <th>반납예정일</th>
+                        <th>반납하기</th>
+                    </tr>
+                    <%while(rs.next()){
+                        String returndate = rs.getString("returndate");
+                        String notReturn = "null";
+                        if(returndate.equals(notReturn)){
+                    %>
+                    <tr>
+                        <form method="post" action="Return.jsp" accept-charset="UTF-8">
+                            <td><input type = "hidden" name = "no"value=<%=rs.getString("no")%>></td>
+                            <td><%=rs.getString("no")%></td>
+                            <td><%=rs.getString("name")%></td>
+                            <td><%=rs.getString("outdate")%></td>
+                            <td><%=rs.getString("duedate")%></td>
+                            <td><input type="submit" value = "반납"></td>
+                        </form>
+                    </tr>
+                    <%}
+                    }%>
+                </table>
+            </div>
         </div>
     </div>
 </div>
-</div>
-<%
-    request.setCharacterEncoding("utf-8"); // 한글깨짐현상 바로잡음
-    String url = "jdbc:oracle:thin:@localhost:1521:xe";
-    String user = "system";
-    String pass = "pass";
-    Connection conn;
-    PreparedStatement pstmt;
-    ResultSet rs;
-
-    Class.forName("oracle.jdbc.driver.OracleDriver");
-    conn = DriverManager.getConnection(url, user, pass);
-
-    String id = (String)session.getAttribute("id");
-    System.out.println(id);
-    String sql = "select * from list where id like '%"+id+"%'";
-    pstmt=conn.prepareStatement(sql);
-    rs=pstmt.executeQuery();
-%>
-<div class="container">
-<table border="1">
-    <tr>
-        <td><input type = "hidden" name = "nothing"></td>
-        <th>도서번호</th>
-        <th>책제목</th>
-        <th>대여일</th>
-        <th>반납예정일</th>
-        <th>반납하기</th>
-    </tr>
-    <%while(rs.next()){
-        String returndate = rs.getString("returndate");
-        String notReturn = "null";
-        if(returndate.equals(notReturn)){
-    %>
-    <tr>
-        <form method="post" action="Return.jsp" accept-charset="UTF-8">
-            <td><input type = "hidden" name = "no"value=<%=rs.getString("no")%>></td>
-            <td><%=rs.getString("no")%></td>
-            <td><%=rs.getString("name")%></td>
-            <td><%=rs.getString("outdate")%></td>
-            <td><%=rs.getString("duedate")%></td>
-            <td><input type="submit" value="반납"/></td>
-        </form>
-    </tr>
-    <%}
-    }%>
-</table>
-</div>
-
-        </div>
-    </div>
 <%
     rs.close();
     pstmt.close();
     conn.close();
 %>
-
-
+<script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src = "js/bootstrap.min.js"></script>
 </body>
 </html>

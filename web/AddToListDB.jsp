@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
          pageEncoding="EUC-KR"%>
 <%@ page language="java" import="java.sql.*" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@page import="java.util.Calendar" %>
+<%@page import="java.util.Date" %>
+<%@page import="java.text.DecimalFormat" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -44,9 +48,26 @@
     </div>
 </nav>
 <%
-    java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat("yyMMdd");
-    String today = formatter.format(new java.util.Date());
-    System.out.println(today);
+    Date toDay = new Date();
+    SimpleDateFormat date  = new SimpleDateFormat("yyyyMMdd");
+    String today = date.format(toDay);
+
+    String laterDay = null;
+
+    Calendar cal = Calendar.getInstance();
+    Date originDate = new Date();
+    Date laterDate = new Date();
+    SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
+    originDate = format.parse(today);
+
+    cal.setTime(laterDate);
+    cal.add(Calendar.DATE, 14);
+    laterDate = cal.getTime();
+    laterDay = format.format(laterDate);
+
+    System.out.println(laterDay);
+
+
 
     request.setCharacterEncoding("utf-8"); // ÇÑ±Û±úÁüÇö»ó ¹Ù·ÎÀâÀ½
     String booknum = request.getParameter("no");
@@ -90,7 +111,7 @@
     pstmt.setString(3,bookname);
     pstmt.setString(4,booknum);
     pstmt.setString(5,today);
-    pstmt.setString(6,"null");
+    pstmt.setString(6,laterDay);
     pstmt.setString(7,"null");
     pstmt.setString(8,"null");
     pstmt.executeUpdate();
@@ -100,7 +121,7 @@
     pstmt.close();
     conn.close();
 %>
-
-
+<script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src = "js/bootstrap.min.js"></script>
 </body>
 </html>

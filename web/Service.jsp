@@ -45,24 +45,8 @@
 </nav>
 
 <div class = "container">
-    <div class = "row">
-
-        <div class = "col-md-2">
-            <div class="container">
-                <h3>대출/연장/예약</h3>
-                <div class="row">
-                    <div class="col-md-2">
-                        <nav class="nav-sidebar">
-                            <ul class="nav">
-                                <li class="active"><a href="BorrowingExtension.jsp">대출/연장 현황</a></li>
-                                <li class=""><a href="Record.jsp">대출/반납 기록</a></li>
-                                <li class=""><a href="Reservation.jsp">    예약</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class = "col">
+                <h3>WAP 도서 대여 목록</h3>
         <%
             request.setCharacterEncoding("utf-8"); // 한글깨짐현상 바로잡음
             String url = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -77,7 +61,7 @@
 
             String id = (String)session.getAttribute("id");
             System.out.println(id);
-            String sql = "select * from list where id like '%"+id+"%'";
+            String sql = "select * from list";
             pstmt=conn.prepareStatement(sql);
             rs=pstmt.executeQuery();
         %>
@@ -85,30 +69,25 @@
             <div class="container">
                 <table border="1">
                     <tr>
-                        <td><input type = "hidden" name = "nothing"></td>
+                        <th>이름</th>
                         <th>도서번호</th>
                         <th>책제목</th>
                         <th>대여일</th>
                         <th>반납예정일</th>
-                        <th>반납하기</th>
+                        <th>반납일</th>
+                        <th>반납유형</th>
                     </tr>
-                    <%while(rs.next()){
-                        String returndate = rs.getString("returndate");
-                        String notReturn = "null";
-                        if(returndate.equals(notReturn)){
-                    %>
+                    <%while(rs.next()){%>
                     <tr>
-                        <form method="post" action="Return.jsp" accept-charset="UTF-8">
-                            <td><input type = "hidden" name = "no"value=<%=rs.getString("no")%>></td>
-                            <td><%=rs.getString("no")%></td>
-                            <td><%=rs.getString("name")%></td>
-                            <td><%=rs.getString("outdate")%></td>
-                            <td><%=rs.getString("duedate")%></td>
-                            <td><input type="submit" value = "반납"></td>
-                        </form>
+                        <td><%=rs.getString("borrower")%></td>
+                        <td><%=rs.getString("no")%></td>
+                        <td><%=rs.getString("name")%></td>
+                        <td><%=rs.getString("outdate")%></td>
+                        <td><%=rs.getString("duedate")%></td>
+                        <td><%=rs.getString("returndate")%></td>
+                        <td><%=rs.getString("returntype")%></td>
                     </tr>
-                    <%}
-                    }%>
+                    <%}%>
                 </table>
             </div>
         </div>

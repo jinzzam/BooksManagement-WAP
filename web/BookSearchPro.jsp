@@ -26,11 +26,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li><a href="BookSearchForm.jsp">자료 검색</a></li>
-            <li><a href="bbs.jsp">도서관 서비스</a></li>
+            <li><a href="Service.jsp">도서관 서비스</a></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">내 정보</a>
                 <ul class = "dropdown-menu">
-                    <li><a href="#">개인정보관리</a> </li>
+                    <li><a href="/get-new-info">개인정보관리</a></li>
                     <li><a href="BorrowingExtensionReservation.jsp">대출/연장/예약</a> </li>
                 </ul>
             </li>

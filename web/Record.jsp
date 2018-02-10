@@ -85,30 +85,23 @@
             <div class="container">
                 <table border="1">
                     <tr>
-                        <td><input type = "hidden" name = "nothing"></td>
                         <th>도서번호</th>
                         <th>책제목</th>
                         <th>대여일</th>
                         <th>반납예정일</th>
-                        <th>반납하기</th>
+                        <th>반납일</th>
+                        <th>반납유형</th>
                     </tr>
-                    <%while(rs.next()){
-                        String returndate = rs.getString("returndate");
-                        String notReturn = "null";
-                        if(returndate.equals(notReturn)){
-                    %>
+                    <%while(rs.next()){%>
                     <tr>
-                        <form method="post" action="Return.jsp" accept-charset="UTF-8">
-                            <td><input type = "hidden" name = "no"value=<%=rs.getString("no")%>></td>
                             <td><%=rs.getString("no")%></td>
                             <td><%=rs.getString("name")%></td>
                             <td><%=rs.getString("outdate")%></td>
                             <td><%=rs.getString("duedate")%></td>
-                            <td><input type="submit" value = "반납"></td>
-                        </form>
+                            <td><%=rs.getString("returndate")%></td>
+                            <td><%=rs.getString("returntype")%></td>
                     </tr>
-                    <%}
-                    }%>
+                    <%}%>
                 </table>
             </div>
         </div>

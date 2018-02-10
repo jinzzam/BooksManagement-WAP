@@ -11,13 +11,12 @@
     <title>회원 정보 수정</title>
 </head>
 <body>
-<form method="post" action="/modify">
+<form method="post" action="/modify-info">
     이름 : <%out.println(request.getAttribute("name"));%><br>
     아이디 : <%out.println(request.getAttribute("id"));%><br>
     패스워드 : <input type="password" name="newPassword"><br>
-    이메일 :<input type="text" name="email"><br>
-    폰 번호 : <input type="text" name="phone"><br>
-
+    이메일 :<input type="text" name="newEmail"><br>
+    폰 번호 : <input type="text" name="newPhone"><br>
     <input type="submit" value="수정하기">
 </form>
 

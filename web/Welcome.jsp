@@ -46,7 +46,7 @@
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">내 정보</a>
                 <ul class="dropdown-menu">
-                    <li><a href="/modify">개인정보관리</a></li>
+                    <li><a href="/get-new-info">개인정보관리</a></li>
                     <li><a href="BorrowingExtensionReservation.jsp">대출/연장/예약</a></li>
                 </ul>
             </li>

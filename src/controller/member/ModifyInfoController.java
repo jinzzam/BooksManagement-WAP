@@ -39,6 +39,7 @@ public class ModifyInfoController extends HttpServlet {
         }
 
         request.setAttribute("ch", ch);
+        System.out.println(ch);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("ChangeResult.jsp");
         requestDispatcher.forward(request, response);
 

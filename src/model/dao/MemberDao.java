@@ -42,10 +42,9 @@ public class MemberDao {
                         rs.getString(4),
                         rs.getString(5)));
             }
-            if(memberDtoArr.size()==0){
+            if (memberDtoArr.size() == 0) {
                 return null;
-            }
-            else{
+            } else {
                 return memberDtoArr;
             }
         } catch (SQLException e) {
@@ -54,12 +53,12 @@ public class MemberDao {
         return null;
     }
 
-    public MemberDto read(String id){
+    public MemberDto read(String id) {
         MemberDto memberDto = null;
         String sql = "select * from member where id = ?";
         try {
             pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1,id);
+            pstmt.setString(1, id);
             rs = pstmt.executeQuery();
             while (rs.next()) {
                 memberDto = new MemberDto(rs.getString(1),
@@ -74,7 +73,7 @@ public class MemberDao {
         return memberDto;
     }
 
-    public boolean create(MemberDto memberDto){
+    public boolean create(MemberDto memberDto) {
         String sql = "insert into member values(?, ?, ?, ?, ?)";
         try {
             pstmt = conn.prepareStatement(sql);
@@ -91,9 +90,9 @@ public class MemberDao {
         return false;
     }
 
-    public boolean updatePassword(String newPassword, String name){
+    public boolean updatePassword(String newPassword, String name) {
         String sql = "update member set password=? where id=?";
-        try{
+        try {
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, newPassword);
             pstmt.setString(2, name);
@@ -110,6 +109,25 @@ public class MemberDao {
         }
         return true;
     }
+
+    public boolean updateEmail(String newEmail, String name) {
+        String sql = "update member set email=? where id=?";
+        try {
+            pstmt = conn.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+            pstmt.setString(1, newEmail);
+            pstmt.setString(2, name);
+            rs = pstmt.executeQuery();
+            if(rs.next()){
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
 
     public static MemberDao getInstance() {
         return instance;

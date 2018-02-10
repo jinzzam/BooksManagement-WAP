@@ -12,8 +12,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/modify")
-public class ModifyController extends HttpServlet {
+@WebServlet("/get-new-info")
+public class GetNewInfoController extends HttpServlet {
 
     protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("UTF-8");
@@ -29,9 +29,6 @@ public class ModifyController extends HttpServlet {
 
             request.setAttribute("id", id);
             request.setAttribute("name", name);
-            request.setAttribute("password", password);
-            request.setAttribute("email", email);
-            request.setAttribute("phone", phone);
 
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("ModifyInfo.jsp");
             requestDispatcher.forward(request, response);

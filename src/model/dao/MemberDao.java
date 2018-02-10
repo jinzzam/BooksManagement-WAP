@@ -90,44 +90,21 @@ public class MemberDao {
         return false;
     }
 
-    public boolean updatePassword(String newPassword, String name) {
-        String sql = "update member set password=? where id=?";
+    public boolean update(MemberDto memberDto, String id) {
+        String sql = "update member set password=?, email=?, phone=? where id=?";
         try {
             pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, newPassword);
-            pstmt.setString(2, name);
-            rs = pstmt.executeQuery();
-            while (rs.next()) {
-                MemberDto memberDto = new MemberDto(rs.getString(1),
-                        rs.getString(2),
-                        rs.getString(3),
-                        rs.getString(4),
-                        rs.getString(5));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return true;
-    }
-
-    public boolean updateEmail(String newEmail, String name) {
-        String sql = "update member set email=? where id=?";
-        try {
-            pstmt = conn.prepareStatement(sql);
-            rs = pstmt.executeQuery();
-            pstmt.setString(1, newEmail);
-            pstmt.setString(2, name);
-            rs = pstmt.executeQuery();
-            if(rs.next()){
-                return true;
-            }
+            pstmt.setString(1, memberDto.getPassword());
+            pstmt.setString(2, memberDto.getEmail());
+            pstmt.setString(3, memberDto.getEmail());
+            pstmt.setString(4, memberDto.getId());
+            pstmt.executeQuery();
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return false;
     }
-
-
 
     public static MemberDao getInstance() {
         return instance;

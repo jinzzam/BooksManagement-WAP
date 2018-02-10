@@ -1,4 +1,5 @@
-<%--
+<%@ page import="model.dto.MemberDto" %>
+<%@ page import="model.dao.MemberDao" %><%--
   Created by IntelliJ IDEA.
   User: jin
   Date: 2018-02-10
@@ -8,15 +9,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%
+        MemberDao memberDao = MemberDao.getInstance();
+        MemberDto memberDto = memberDao.read((String)request.getAttribute("id"));
+    %>
     <title>회원 정보 수정</title>
 </head>
 <body>
 <form method="post" action="/modify-info">
     이름 : <%out.println(request.getAttribute("name"));%><br>
     아이디 : <%out.println(request.getAttribute("id"));%><br>
-    패스워드 : <input type="password" name="newPassword"><br>
-    이메일 :<input type="text" name="newEmail"><br>
-    폰 번호 : <input type="text" name="newPhone"><br>
+    패스워드 : <input type="password" name="newPassword" value="<%memberDto.getPassword();%>"><br>
+    이메일 :<input type="text" name="newEmail" value="<%memberDto.getEmail();%>"><br>
+    폰 번호 : <input type="text" name="newPhone" value="<%memberDto.getPhone();%>"><br>
     <input type="submit" value="수정하기">
 </form>
 

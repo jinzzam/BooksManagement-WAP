@@ -19,23 +19,28 @@ public class ModifyInfoController extends HttpServlet {
         HttpSession session = request.getSession();
         MemberService memberService = MemberService.getInstance();
         String id = (String) session.getAttribute("id");
+        String newPassword = memberService.getMember(id).getPassword();
+        String newEmail = memberService.getMember(id).getEmail();
+        String newPhone = memberService.getMember(id).getPhone();
         boolean ch = false;
-        if (request.getAttribute("newPassword") != null) {
-            String newPassword = (String) request.getAttribute("newPassword");
+        try {
+            if(request.getAttribute("newPassword")!=null) {
+                newPassword = (String) request.getAttribute("newPassword");
+            }
+            if(request.getAttribute("newEmail")!=null) {
+                newEmail = (String) request.getAttribute("newEmail");
+            }
+            if(request.getAttribute("newPhone")!=null) {
+                newPhone = (String) request.getAttribute("newPhone");
+            }
+
             memberService.getMember(id).setPassword(newPassword);
-            ch = true;
-        }
-
-        if (request.getAttribute("newEmail") != null) {
-            String newEmail = (String) request.getAttribute("newEmail");
             memberService.getMember(id).setEmail(newEmail);
-            ch = true;
-        }
+            memberService.getMember(id).setEmail(newPhone);
 
-        if (request.getAttribute("newPhone") != null) {
-            String newPhone = (String) request.getAttribute("newPhone");
-            memberService.getMember(id).setPhone(newPhone);
-            ch = true;
+            ch = memberService.update(memberService.getMember(id), id);
+        } catch (Exception e){
+            e.printStackTrace();
         }
 
         request.setAttribute("ch", ch);

@@ -52,6 +52,10 @@ public class MemberService {
         return memberDao.read(id);
     }
 
+    public boolean update(MemberDto memberDto, String id){
+        return memberDao.update(memberDto, getName(id));
+    }
+
     public static MemberService getInstance() {
         return instance;
     }

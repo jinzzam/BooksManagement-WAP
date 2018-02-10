@@ -48,6 +48,7 @@
         </ul>
     </div>
 </nav>
+<div id = "secondary">
 <div class="container">
     <h3>대출/연장/예약</h3>
     <div class="row">
@@ -61,6 +62,7 @@
         </nav>
      </div>
     </div>
+</div>
 </div>
 <script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src = "js/bootstrap.min.js"></script>

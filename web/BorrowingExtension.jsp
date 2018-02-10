@@ -43,10 +43,15 @@
         </ul>
     </div>
 </nav>
+
+<div class = "container">
+        <div class = "row">
+
+            <div class = "col-md-2">
 <div class="container">
     <h3>대출/연장/예약</h3>
     <div class="row">
-        <div class="col-xs-2">
+        <div class="col-md-2">
             <nav class="nav-sidebar">
                 <ul class="nav">
                     <li class="active"><a href="BorrowingExtension.jsp">대출/연장 현황</a></li>
@@ -56,6 +61,7 @@
             </nav>
         </div>
     </div>
+</div>
 </div>
 <%
     request.setCharacterEncoding("utf-8"); // 한글깨짐현상 바로잡음
@@ -75,7 +81,16 @@
     pstmt=conn.prepareStatement(sql);
     rs=pstmt.executeQuery();
 %>
+<div class="container">
 <table border="1">
+    <tr>
+        <td><input type = "hidden" name = "nothing"></td>
+        <th>도서번호</th>
+        <th>책제목</th>
+        <th>대여일</th>
+        <th>반납예정일</th>
+        <th>반납하기</th>
+    </tr>
     <%while(rs.next()){
         String returndate = rs.getString("returndate");
         String notReturn = "null";
@@ -94,6 +109,10 @@
     <%}
     }%>
 </table>
+</div>
+
+        </div>
+    </div>
 <%
     rs.close();
     pstmt.close();

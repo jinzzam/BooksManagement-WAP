@@ -46,7 +46,6 @@
 
 <div class = "container">
     <div class = "row">
-
         <div class = "col-md-2">
             <div class="container">
                 <h3>대출/연장/예약</h3>
@@ -76,7 +75,6 @@
             conn = DriverManager.getConnection(url, user, pass);
 
             String id = (String)session.getAttribute("id");
-            System.out.println(id);
             String sql = "select * from list where id like '%"+id+"%'";
             pstmt=conn.prepareStatement(sql);
             rs=pstmt.executeQuery();

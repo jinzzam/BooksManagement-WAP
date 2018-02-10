@@ -46,7 +46,6 @@
 <%
     java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat("yyyyMMdd");
     String today = formatter.format(new java.util.Date());
-    System.out.println(today);
 
     request.setCharacterEncoding("utf-8"); // ÇÑ±Û±úÁüÇö»ó ¹Ù·ÎÀâÀ½
     String booknum = request.getParameter("no");

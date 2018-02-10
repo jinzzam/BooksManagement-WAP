@@ -56,39 +56,58 @@
     conn = DriverManager.getConnection(url, user, pass);
 
     String name = request.getParameter("search-book");
-    out.println(name);
 
     String sql = "select * from book where name like '%"+name+"%'";
     pstmt=conn.prepareStatement(sql);
 
     rs=pstmt.executeQuery();
 %>
-<table border="1">
-    <%while(rs.next()){
-        String available = rs.getString("available");
-        String unavail = "1";
-    %>
-    <tr>
-        <form method="post" action="AddToListDB.jsp" accept-charset="UTF-8">
-            <td><input type = "hidden" name = "no"value=<%=rs.getString("no")%>></td>
-            <td><%=rs.getString("no")%></td>
-            <td><%=rs.getString("name")%></td>
-            <td><%=rs.getString("author")%></td>
-            <td><%=rs.getString("translator")%></td>
-            <%if(!unavail.equals(available)) {%>
-            <td><input type="submit" value="대여하기"></td>
-            <%} else{%>
-            <td>대여불가</td>
-            <%}%>
-        </form>
-    </tr>
-    <%}%>
-</table>
+
+<div class = "container">
+    <div class = "col">
+        <h3>검색단어 : <%=name%></h3>
+        <div class = "col-md-6">
+            <div class="container">
+                <table border="1">
+                    <tr>
+                        <td><input type = "hidden" name = "nothing"></td>
+                        <th>도서번호</th>
+                        <th>책제목</th>
+                        <th>저자</th>
+                        <th>역자</th>
+                        <th>대여가능여부</th>
+                    </tr>
+                    <%while(rs.next()){
+                        String available = rs.getString("available");
+                        String unavail = "1";
+                    %>
+                    <tr>
+                        <form method="post" action="AddToListDB.jsp" accept-charset="UTF-8">
+                            <td><input type = "hidden" name = "no"value=<%=rs.getString("no")%>></td>
+                            <td><%=rs.getString("no")%></td>
+                            <td><%=rs.getString("name")%></td>
+                            <td><%=rs.getString("author")%></td>
+                            <td><%=rs.getString("translator")%></td>
+                            <%if(!unavail.equals(available)) {%>
+                            <td><input type="submit" value="대여하기"></td>
+                            <%} else{%>
+                            <td>대여불가</td>
+                            <%}%>
+                        </form>
+                    </tr>
+                    <%}%>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
 <%
     rs.close();
     pstmt.close();
     conn.close();
 %>
+
 <script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src = "js/bootstrap.min.js"></script>
 </body>

@@ -60,7 +60,6 @@
             conn = DriverManager.getConnection(url, user, pass);
 
             String id = (String)session.getAttribute("id");
-            System.out.println(id);
             String sql = "select * from list";
             pstmt=conn.prepareStatement(sql);
             rs=pstmt.executeQuery();

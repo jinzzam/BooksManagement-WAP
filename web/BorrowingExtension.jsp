@@ -76,7 +76,6 @@
             conn = DriverManager.getConnection(url, user, pass);
 
             String id = (String)session.getAttribute("id");
-            System.out.println(id);
             String sql = "select * from list where id like '%"+id+"%'";
             pstmt=conn.prepareStatement(sql);
             rs=pstmt.executeQuery();

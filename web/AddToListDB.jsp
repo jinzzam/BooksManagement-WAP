@@ -121,9 +121,6 @@
     pstmt.close();
     conn.close();
 %>
-<h2>
-    <%=bookname%>을(를) 대여하였습니다. <%=laterDay%> 까지 반납해 주시기 바랍니다.
-</h2>
 <script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src = "js/bootstrap.min.js"></script>
 </body>

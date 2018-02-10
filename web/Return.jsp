@@ -104,7 +104,6 @@ sql = "update list set returndate = ?, returntype = ? where no = ? and returntyp
     pstmt.close();
     conn.close();
 %>
-<jsp:forward page="BorrowingExtension.jsp"/>
 <script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src = "js/bootstrap.min.js"></script>
 </body>

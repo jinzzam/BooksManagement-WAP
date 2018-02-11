@@ -50,19 +50,21 @@
                     <li><a href="BorrowingExtensionReservation.jsp">대출/연장/예약</a></li>
                 </ul>
             </li>
-            <li><a href="AboutWapLib.jsp">도서관 이용안내</a></li>
+            <li><a href="bbs.jsp">도서관 이용안내</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">로그아웃<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="/logout">로그아웃</a></li>
-                    <li><a href="DeleteMember.jsp">회원탈퇴</a></li>
-                </ul>
+                <a href="/logout" role="button" aria-haspopup="true" aria-expanded="false">로그아웃<span class="caret"></span></a>
             </li>
         </ul>
     </div>
 </nav>
+
+WAP 도서관에 오신 것을 환영합니다.<br>
+
+책 대여기간은 2주이며 권수에 제한은 없습니다.<br>
+학기가 끝날 때는 꼭 책을 반납해주시기 바랍니다.<br>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

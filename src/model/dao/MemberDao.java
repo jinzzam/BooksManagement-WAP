@@ -106,6 +106,17 @@ public class MemberDao {
         return false;
     }
 
+    public void delete(String id){
+        String sql = "delete member where id=?";
+        try{
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, id);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static MemberDao getInstance() {
         return instance;
     }

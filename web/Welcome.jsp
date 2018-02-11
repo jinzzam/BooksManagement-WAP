@@ -54,7 +54,11 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a href="/logout" role="button" aria-haspopup="true" aria-expanded="false">로그아웃<span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">로그아웃<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/logout">로그아웃</a></li>
+                    <li><a href="DeleteMember.jsp">회원탈퇴</a></li>
+                </ul>
             </li>
         </ul>
     </div>

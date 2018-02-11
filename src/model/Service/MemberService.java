@@ -56,6 +56,10 @@ public class MemberService {
         return memberDao.update(memberDto, getName(id));
     }
 
+    public void delete(String id){
+        memberDao.delete(id);
+    }
+
     public static MemberService getInstance() {
         return instance;
     }

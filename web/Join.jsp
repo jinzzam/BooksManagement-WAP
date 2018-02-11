@@ -69,10 +69,10 @@
                 <br>
                 <div class="input-group">
                     <span class="input-group-addon"> <span class="glyphicon glyphicon-phone"> </span> </span>
-                    <input type="number" class="form-control" placeholder="핸드폰 번호" name="phone">
+                    <input type="text" class="form-control" placeholder="핸드폰 번호" name="phone">
                 </div>
                 <br>
-                <input type="submit" class="btn btn-primary form-control" value="join"></input>
+                <input type="submit" class="btn btn-primary form-control" value="JOIN"></input>
             </div>
         </div>
     </div>

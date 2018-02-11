@@ -9,6 +9,13 @@
     <title>Insert title here</title>
     <style>
         body { padding-top: 20px; }
+        table,th,td{
+            border: 1px solid #bcbcbc;
+            height: 40px;
+        }
+        table{
+            width: 800px;
+        }
     </style>
 </head>
 <body>
@@ -85,11 +92,11 @@
                 <table border="1">
                     <tr>
                         <td><input type = "hidden" name = "nothing"></td>
-                        <th>도서번호</th>
-                        <th>책제목</th>
-                        <th>대여일</th>
-                        <th>반납예정일</th>
-                        <th>반납하기</th>
+                        <th class="text-center">도서번호</th>
+                        <th class="text-center">책제목</th>
+                        <th class="text-center">대여일</th>
+                        <th class="text-center">반납예정일</th>
+                        <th class="text-center">반납하기</th>
                     </tr>
                     <%while(rs.next()){
                         String returndate = rs.getString("returndate");
@@ -99,11 +106,11 @@
                     <tr>
                         <form method="post" action="Return.jsp" accept-charset="UTF-8">
                             <td><input type = "hidden" name = "no"value=<%=rs.getString("no")%>></td>
-                            <td><%=rs.getString("no")%></td>
-                            <td><%=rs.getString("name")%></td>
-                            <td><%=rs.getString("outdate")%></td>
-                            <td><%=rs.getString("duedate")%></td>
-                            <td><input type="submit" value = "반납"></td>
+                            <td align="center"><%=rs.getString("no")%></td>
+                            <td align="center"><%=rs.getString("name")%></td>
+                            <td align="center"><%=rs.getString("outdate")%></td>
+                            <td align="center"><%=rs.getString("duedate")%></td>
+                            <td align="center"><input type="submit" value = "반납"></td>
                         </form>
                     </tr>
                     <%}

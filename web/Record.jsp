@@ -9,6 +9,13 @@
     <title>Insert title here</title>
     <style>
         body { padding-top: 20px; }
+        table,th,td{
+            border: 1px solid #bcbcbc;
+            height: 40px;
+        }
+        table{
+            width: 800px;
+        }
     </style>
 </head>
 <body>
@@ -83,21 +90,21 @@
             <div class="container">
                 <table border="1">
                     <tr>
-                        <th>도서번호</th>
-                        <th>책제목</th>
-                        <th>대여일</th>
-                        <th>반납예정일</th>
-                        <th>반납일</th>
-                        <th>반납유형</th>
+                        <th class="text-center">도서번호</th>
+                        <th class="text-center">책제목</th>
+                        <th class="text-center">대여일</th>
+                        <th class="text-center">반납예정일</th>
+                        <th class="text-center">반납일</th>
+                        <th class="text-center">반납유형</th>
                     </tr>
                     <%while(rs.next()){%>
                     <tr>
-                            <td><%=rs.getString("no")%></td>
-                            <td><%=rs.getString("name")%></td>
-                            <td><%=rs.getString("outdate")%></td>
-                            <td><%=rs.getString("duedate")%></td>
-                            <td><%=rs.getString("returndate")%></td>
-                            <td><%=rs.getString("returntype")%></td>
+                            <td align="center"><%=rs.getString("no")%></td>
+                            <td align="center"><%=rs.getString("name")%></td>
+                            <td align="center"><%=rs.getString("outdate")%></td>
+                            <td align="center"><%=rs.getString("duedate")%></td>
+                            <td align="center"><%=rs.getString("returndate")%></td>
+                            <td align="center"><%=rs.getString("returntype")%></td>
                     </tr>
                     <%}%>
                 </table>

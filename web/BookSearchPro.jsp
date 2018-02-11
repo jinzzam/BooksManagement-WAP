@@ -9,6 +9,13 @@
     <title>Insert title here</title>
     <style>
         body { padding-top: 20px; }
+        table,th,td{
+            border: 1px solid #bcbcbc;
+            height: 40px;
+        }
+        table{
+            width: 850px;
+        }
     </style>
 </head>
 <body>
@@ -71,11 +78,11 @@
                 <table border="1">
                     <tr>
                         <td><input type = "hidden" name = "nothing"></td>
-                        <th>도서번호</th>
-                        <th>책제목</th>
-                        <th>저자</th>
-                        <th>역자</th>
-                        <th>대여가능여부</th>
+                        <th class="text-center">도서번호</th>
+                        <th class="text-center">책제목</th>
+                        <th class="text-center">저자</th>
+                        <th class="text-center">역자</th>
+                        <th class="text-center">대여가능여부</th>
                     </tr>
                     <%while(rs.next()){
                         String available = rs.getString("available");
@@ -84,14 +91,14 @@
                     <tr>
                         <form method="post" action="AddToListDB.jsp" accept-charset="UTF-8">
                             <td><input type = "hidden" name = "no"value=<%=rs.getString("no")%>></td>
-                            <td><%=rs.getString("no")%></td>
-                            <td><%=rs.getString("name")%></td>
-                            <td><%=rs.getString("author")%></td>
-                            <td><%=rs.getString("translator")%></td>
+                            <td align="center"><%=rs.getString("no")%></td>
+                            <td align="center"><%=rs.getString("name")%></td>
+                            <td align="center"><%=rs.getString("author")%></td>
+                            <td align="center"><%=rs.getString("translator")%></td>
                             <%if(!unavail.equals(available)) {%>
-                            <td><input type="submit" value="대여하기"></td>
+                            <td align="center"><input type="submit" value="대여하기"></td>
                             <%} else{%>
-                            <td>대여불가</td>
+                            <td align="center">대여불가</td>
                             <%}%>
                         </form>
                     </tr>

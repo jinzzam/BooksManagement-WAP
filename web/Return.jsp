@@ -12,9 +12,9 @@
     </style>
 </head>
 <body>
-<nav class = "navbar navbar-default">
-    <div class = "navbar-header">
-        <button type="button" class = "navbar-toggle collapsed"
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
                 data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
                 aria-expanded="false">
             <span class="icon-bar"></span>
@@ -29,16 +29,20 @@
             <li><a href="Service.jsp">도서관 서비스</a></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">내 정보</a>
-                <ul class = "dropdown-menu">
+                <ul class="dropdown-menu">
                     <li><a href="/get-new-info">개인정보관리</a></li>
-                    <li><a href="BorrowingExtensionReservation.jsp">대출/연장/예약</a> </li>
+                    <li><a href="BorrowingExtensionReservation.jsp">대출/연장/예약</a></li>
                 </ul>
             </li>
-            <li><a href="bbs.jsp">도서관 이용안내</a></li>
+            <li><a href="AboutWapLib.jsp">도서관 이용안내</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a href="/logout" role="button" aria-haspopup="true" aria-expanded="false">로그아웃<span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">로그아웃<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/logout">로그아웃</a></li>
+                    <li><a href="DeleteMember.jsp">회원탈퇴</a></li>
+                </ul>
             </li>
         </ul>
     </div>
